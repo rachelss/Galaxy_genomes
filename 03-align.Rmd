@@ -1,0 +1,22 @@
+# Genome Alignment {#align}
+
+## Obtaining a reference genome
+
+To align your assembled genome against a reference genome, we first need to import this reference to Galaxy.
+
+
+import this genome, we will use the “NCBI Accession Download” tool under “Get Data” on the left side of the Galaxy page. 
+
+## Aligning two samples 
+
+Now we are ready to align the two genomes. Under the “EMBOSS” section on the left side of the page, click “needle”, which is short for “Needleman-Wunsch global alignment”.
+
+For sequence 1, select the contigs that we produced as the result of SPAdes. For sequence 2, select the reference. Keep the other parameters default. After opting for an Email notification, click “Execute”. The algorithm should take a few minutes to run.
+
+When the algorithm has finished, view its data. This will show the alignment, in which matches are shown with “|” symbols, mismatches are shown with “.” symbols, and indels do not have a symbol between the two rows.
+
+- How many matched symbols does the alignment report? How many gap symbols?
+
+- What do you notice about the ends of the alignment? What do you think happened when the genome was assembled?
+
+- Scroll through the interior of the alignment. Do you notice any regions that appear to be more variable than other regions?

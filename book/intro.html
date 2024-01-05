@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction | Galaxy Bacterial Genomics Workshop</title>
+  <meta name="description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction | Galaxy Bacterial Genomics Workshop" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
+  <meta name="github-repo" content="rachelss/Galaxy_genomes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction | Galaxy Bacterial Genomics Workshop" />
+  
+  <meta name="twitter:description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
+  
+
+<meta name="author" content="Rachel Schwartz" />
+
+
+<meta name="date" content="2024-01-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="assembly.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Andes Phylogenomics Workshop</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this workshop</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#case-studies"><i class="fa fa-check"></i><b>2.2</b> Case Studies</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#course-objectives"><i class="fa fa-check"></i><b>2.3</b> Course Objectives</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#genomic-data"><i class="fa fa-check"></i><b>2.4</b> Genomic data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="assembly.html"><a href="assembly.html"><i class="fa fa-check"></i><b>3</b> Genome Assembly</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="assembly.html"><a href="assembly.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a></li>
+<li class="chapter" data-level="3.2" data-path="assembly.html"><a href="assembly.html#getting-started-with-galaxy"><i class="fa fa-check"></i><b>3.2</b> Getting started with Galaxy</a></li>
+<li class="chapter" data-level="3.3" data-path="assembly.html"><a href="assembly.html#getting-your-sequencing-data"><i class="fa fa-check"></i><b>3.3</b> Getting your sequencing data</a></li>
+<li class="chapter" data-level="3.4" data-path="assembly.html"><a href="assembly.html#assembling-a-genome"><i class="fa fa-check"></i><b>3.4</b> Assembling a genome</a></li>
+<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#analyzing-the-results-of-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Analyzing the results of the assembly</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="align.html"><a href="align.html"><i class="fa fa-check"></i><b>4</b> Genome Alignment</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="align.html"><a href="align.html#obtaining-a-reference-genome"><i class="fa fa-check"></i><b>4.1</b> Obtaining a reference genome</a></li>
+<li class="chapter" data-level="4.2" data-path="align.html"><a href="align.html#aligning-two-samples"><i class="fa fa-check"></i><b>4.2</b> Aligning two samples</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="annot.html"><a href="annot.html"><i class="fa fa-check"></i><b>5</b> Genome Annotation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="annot.html"><a href="annot.html#annotating"><i class="fa fa-check"></i><b>5.1</b> Annotating</a></li>
+<li class="chapter" data-level="5.2" data-path="annot.html"><a href="annot.html#viewing-the-annotation"><i class="fa fa-check"></i><b>5.2</b> Viewing the annotation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Galaxy Bacterial Genomics Workshop</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Introduction<a href="intro.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Biological research is turning to genetic research methods for a deeper look into the biological factors that encode various traits.
+We can use genetic techniques to delimit species, define populations, understand reproductive patterns systems, and answer many other interesting biological questions.</p>
+<p>This workshop is designed to allow you to go from bacteria through
+genome comparisons to identify mutations and structural changes in genomes.
+This workshop will provide an introduction to next-generation sequencing technology for biologists.</p>
+</div>
+<div id="case-studies" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Case Studies<a href="intro.html#case-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this course, we will focus on two projects in bacteria.
+The first project will sequence <em>Haemophilus parainfluenzae</em>, a common commensal organism of the normal oropharynx, recognized as an opportunistic pathogen causing systemic diseases.
+We will compare strains where particular genes have been deleted to the reference sequence.
+The second project will compare multiple strains of pathogenic <em>E. coli</em> to identify novel mutations that may be correlated with phenotype.</p>
+<p>This tutorial steps through the basic process of using Galaxy to assemble and examine these genomes.</p>
+</div>
+<div id="course-objectives" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Course Objectives<a href="intro.html#course-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The goals of this course are to give participants a fundamental understanding of how genome sequencing works and how those data are analysed to draw conclusions.</p>
+</div>
+<div id="genomic-data" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Genomic data<a href="intro.html#genomic-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By definition genomes are large.
+The human genome is 3.2 billion base pairs.
+Even though bacterial genomes are just 2-4 million base pairs,
+if you were to go through and compare two genomes by hand to discover the differences between them it would take a while.
+To add to this complexity, genomes don’t come off the sequencer as a single sequence,
+but as millions of small fragments or thousands of large ones (depending on the technology).
+Think of this sequencing method as tossing a book (your genome) into a paper shredder.
+That means first you have to compare each fragment to a “reference genome” (like the real book)
+and then figure out where your genome differs from the reference.
+This is definitely a process you don’t want to do by hand!</p>
+<p>A computer (at least a big one with lots of computing power) can help us out by automating all these comparisons.
+That means that before we can identify how the sequence of two samples differ
+we need to learn to work with the tools to process our data.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="assembly.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

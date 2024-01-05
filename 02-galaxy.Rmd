@@ -1,0 +1,58 @@
+# Genome Assembly {#assembly}
+
+**Note: many of the instructions for this workshop are adapted from work by Phillip Compeau that can be found at https://compeau.cbd.cmu.edu/online-education/sars-cov-2-software-assignments/**
+
+## Data
+
+In this workshop you have produced genome sequence data in the lab.
+This file is in FASTQ format, in which each read is represented over four lines described as follows.
+
+- A header beginning with the “@” symbol and labeling the read. Notice that because these are read pairs, the first two reads’ headers are the same and end with “/1” and “/2”.
+- The read as a sequence of nucleotides.
+- A line containing a “+” symbol to indicate the end of nucleotides. This line may have more header information, but doesn’t for this dataset.
+- A collection of ASCII symbols representing Phred quality scores. The i-th quality score corresponds to the i-th nucleotide in the read. Phred scores are helpful for a variety of reasons. For example, researchers will throw out reads having a significant number of bases that do not meet a certain Phred score threshold, especially if the reads have high coverage.
+
+![](https://www.drive5.com/usearch/manual/fastq_fig.jpg)
+
+## Getting started with Galaxy
+
+To assemble the genome from the reads, we will be using the SPAdes assembler that is the most cited genome assembler of all time. 
+To run SPAdes, we will use the service Galaxy, an open source project that allows us to run often testy bioinformatics software in the cloud without the hassle of dealing with local installations. 
+Please follow these step-by-step instructions to register on Galaxy and run SPAdes:
+
+1. Create an account on Galaxy at https://usegalaxy.org/login. 
+Your “public name” can be whatever you like, but you should fill out all fields. After creating an account, log in to Galaxy.
+
+2. Click on the plus '+' on the top right of the page and create a new "history" (i.e., project that will contain data and the results of software runs) with a name that is relevant to the data you are analyzing.
+Some of you are analyzing *E. coli* and others *H. para* so please name accordingly in case you want to try another analysis later.
+All of the following analysis will be performed under this history.
+
+## Getting your sequencing data
+
+1. Click on the 'Upload Data' button on the left side of the screen.
+Ask the instructor about uploading the data from your sample onto Galaxy.
+
+2. When the job turns green, click on the “eye” symbol next to one of your fastq files under your history on the right side of the page. The page may take a few seconds to load, and Galaxy will show you the first megabyte of your read file.
+
+## Assembling a genome
+
+Now that we understand our data a bit better, we are ready to assemble the genome from our data using SPAdes. 
+Under Genomics Analysis - Assembly on the left side of the page, you will see over a dozen different assemblers. Click on SPAdes, which will take you to its homepage.
+
+We will go through each of the settings offered and briefly explain them as well as what we are going to choose.
+
+- Operation mode: Set to "Assembly and Error Correction"
+- Single-end or paired-end short-reads: Set to single-end for the reads from this sequencer as each read exists independently
+- FASTA/FASTQ file(s): Click on the "multiple datasets" button and then select all of your fastq files one at a time using the drop down menu. 
+- Use an additional set of short-reads: Disabled
+- Use all other options as defaults
+
+Click Run!
+
+The assembly will show up as green in your history when it has completed.
+
+## Analyzing the results of the assembly
+
+Now that SPAdes has completed, we will analyze the results. 
+
+1. Click on the eye symbol ("view data") next to the "contigs (fasta)" line on the right side. How many contigs did your assembly produce? What are their lengths? What do you think "coverage" means in this context?

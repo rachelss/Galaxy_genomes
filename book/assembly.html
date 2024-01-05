@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Genome Assembly | Galaxy Bacterial Genomics Workshop</title>
+  <meta name="description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Genome Assembly | Galaxy Bacterial Genomics Workshop" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
+  <meta name="github-repo" content="rachelss/Galaxy_genomes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Genome Assembly | Galaxy Bacterial Genomics Workshop" />
+  
+  <meta name="twitter:description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
+  
+
+<meta name="author" content="Rachel Schwartz" />
+
+
+<meta name="date" content="2024-01-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="align.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Andes Phylogenomics Workshop</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this workshop</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#case-studies"><i class="fa fa-check"></i><b>2.2</b> Case Studies</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#course-objectives"><i class="fa fa-check"></i><b>2.3</b> Course Objectives</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#genomic-data"><i class="fa fa-check"></i><b>2.4</b> Genomic data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="assembly.html"><a href="assembly.html"><i class="fa fa-check"></i><b>3</b> Genome Assembly</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="assembly.html"><a href="assembly.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a></li>
+<li class="chapter" data-level="3.2" data-path="assembly.html"><a href="assembly.html#getting-started-with-galaxy"><i class="fa fa-check"></i><b>3.2</b> Getting started with Galaxy</a></li>
+<li class="chapter" data-level="3.3" data-path="assembly.html"><a href="assembly.html#getting-your-sequencing-data"><i class="fa fa-check"></i><b>3.3</b> Getting your sequencing data</a></li>
+<li class="chapter" data-level="3.4" data-path="assembly.html"><a href="assembly.html#assembling-a-genome"><i class="fa fa-check"></i><b>3.4</b> Assembling a genome</a></li>
+<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#analyzing-the-results-of-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Analyzing the results of the assembly</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="align.html"><a href="align.html"><i class="fa fa-check"></i><b>4</b> Genome Alignment</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="align.html"><a href="align.html#obtaining-a-reference-genome"><i class="fa fa-check"></i><b>4.1</b> Obtaining a reference genome</a></li>
+<li class="chapter" data-level="4.2" data-path="align.html"><a href="align.html#aligning-two-samples"><i class="fa fa-check"></i><b>4.2</b> Aligning two samples</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="annot.html"><a href="annot.html"><i class="fa fa-check"></i><b>5</b> Genome Annotation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="annot.html"><a href="annot.html#annotating"><i class="fa fa-check"></i><b>5.1</b> Annotating</a></li>
+<li class="chapter" data-level="5.2" data-path="annot.html"><a href="annot.html#viewing-the-annotation"><i class="fa fa-check"></i><b>5.2</b> Viewing the annotation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Galaxy Bacterial Genomics Workshop</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="assembly" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Genome Assembly<a href="assembly.html#assembly" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Note: many of the instructions for this workshop are adapted from work by Phillip Compeau that can be found at <a href="https://compeau.cbd.cmu.edu/online-education/sars-cov-2-software-assignments/" class="uri">https://compeau.cbd.cmu.edu/online-education/sars-cov-2-software-assignments/</a></strong></p>
+<div id="data" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Data<a href="assembly.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this workshop you have produced genome sequence data in the lab.
+This file is in FASTQ format, in which each read is represented over four lines described as follows.</p>
+<ul>
+<li>A header beginning with the “@” symbol and labeling the read. Notice that because these are read pairs, the first two reads’ headers are the same and end with “/1” and “/2”.</li>
+<li>The read as a sequence of nucleotides.</li>
+<li>A line containing a “+” symbol to indicate the end of nucleotides. This line may have more header information, but doesn’t for this dataset.</li>
+<li>A collection of ASCII symbols representing Phred quality scores. The i-th quality score corresponds to the i-th nucleotide in the read. Phred scores are helpful for a variety of reasons. For example, researchers will throw out reads having a significant number of bases that do not meet a certain Phred score threshold, especially if the reads have high coverage.</li>
+</ul>
+<p><img src="https://www.drive5.com/usearch/manual/fastq_fig.jpg" /></p>
+</div>
+<div id="getting-started-with-galaxy" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Getting started with Galaxy<a href="assembly.html#getting-started-with-galaxy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To assemble the genome from the reads, we will be using the SPAdes assembler that is the most cited genome assembler of all time.
+To run SPAdes, we will use the service Galaxy, an open source project that allows us to run often testy bioinformatics software in the cloud without the hassle of dealing with local installations.
+Please follow these step-by-step instructions to register on Galaxy and run SPAdes:</p>
+<ol style="list-style-type: decimal">
+<li><p>Create an account on Galaxy at <a href="https://usegalaxy.org/login" class="uri">https://usegalaxy.org/login</a>.
+Your “public name” can be whatever you like, but you should fill out all fields. After creating an account, log in to Galaxy.</p></li>
+<li><p>Click on the plus ‘+’ on the top right of the page and create a new “history” (i.e., project that will contain data and the results of software runs) with a name that is relevant to the data you are analyzing.
+Some of you are analyzing <em>E. coli</em> and others <em>H. para</em> so please name accordingly in case you want to try another analysis later.
+All of the following analysis will be performed under this history.</p></li>
+</ol>
+</div>
+<div id="getting-your-sequencing-data" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Getting your sequencing data<a href="assembly.html#getting-your-sequencing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Click on the ‘Upload Data’ button on the left side of the screen.
+Ask the instructor about uploading the data from your sample onto Galaxy.</p></li>
+<li><p>When the job turns green, click on the “eye” symbol next to one of your fastq files under your history on the right side of the page. The page may take a few seconds to load, and Galaxy will show you the first megabyte of your read file.</p></li>
+</ol>
+</div>
+<div id="assembling-a-genome" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Assembling a genome<a href="assembly.html#assembling-a-genome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that we understand our data a bit better, we are ready to assemble the genome from our data using SPAdes.
+Under Genomics Analysis - Assembly on the left side of the page, you will see over a dozen different assemblers. Click on SPAdes, which will take you to its homepage.</p>
+<p>We will go through each of the settings offered and briefly explain them as well as what we are going to choose.</p>
+<ul>
+<li>Operation mode: Set to “Assembly and Error Correction”</li>
+<li>Single-end or paired-end short-reads: Set to single-end for the reads from this sequencer as each read exists independently</li>
+<li>FASTA/FASTQ file(s): Click on the “multiple datasets” button and then select all of your fastq files one at a time using the drop down menu.</li>
+<li>Use an additional set of short-reads: Disabled</li>
+<li>Use all other options as defaults</li>
+</ul>
+<p>Click Run!</p>
+<p>The assembly will show up as green in your history when it has completed.</p>
+</div>
+<div id="analyzing-the-results-of-the-assembly" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Analyzing the results of the assembly<a href="assembly.html#analyzing-the-results-of-the-assembly" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that SPAdes has completed, we will analyze the results.</p>
+<ol style="list-style-type: decimal">
+<li>Click on the eye symbol (“view data”) next to the “contigs (fasta)” line on the right side. How many contigs did your assembly produce? What are their lengths? What do you think “coverage” means in this context?</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="align.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-galaxy.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

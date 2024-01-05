@@ -1,0 +1,39 @@
+# Introduction {#intro}
+
+##  Introduction  
+
+Biological research is turning to genetic research methods for a deeper look into the biological factors that encode various traits. 
+We can use genetic techniques to delimit species, define populations, understand reproductive patterns systems, and answer many other interesting biological questions.
+
+This workshop is designed to allow you to go from bacteria through
+genome comparisons to identify mutations and structural changes in genomes.
+This workshop will provide an introduction to next-generation sequencing technology for biologists.
+
+## Case Studies
+In this course, we will focus on two projects in bacteria.
+The first project will sequence *Haemophilus parainfluenzae*, a common commensal organism of the normal oropharynx, recognized as an opportunistic pathogen causing systemic diseases.
+We will compare strains where particular genes have been deleted to the reference sequence.
+The second project will compare multiple strains of pathogenic *E. coli* to identify novel mutations that may be correlated with phenotype.
+
+This tutorial steps through the basic process of using Galaxy to assemble and examine these genomes.
+
+## Course Objectives
+
+The goals of this course are to give participants a fundamental understanding of how genome sequencing works and how those data are analysed to draw conclusions.
+
+## Genomic data
+
+By definition genomes are large.
+The human genome is 3.2 billion base pairs.
+Even though bacterial genomes are just 2-4 million base pairs,
+if you were to go through and compare two genomes by hand to discover the differences between them it would take a while.
+To add to this complexity, genomes don't come off the sequencer as a single sequence,
+but as millions of small fragments or thousands of large ones (depending on the technology).
+Think of this sequencing method as tossing a book (your genome) into a paper shredder.
+That means first you have to compare each fragment to a "reference genome" (like the real book)
+and then figure out where your genome differs from the reference.
+This is definitely a process you don't want to do by hand!
+
+A computer (at least a big one with lots of computing power) can help us out by automating all these comparisons.
+That means that before we can identify how the sequence of two samples differ
+we need to learn to work with the tools to process our data. 
