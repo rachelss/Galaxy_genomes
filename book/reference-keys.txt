@@ -9,7 +9,8 @@ data
 getting-started-with-galaxy
 getting-your-sequencing-data
 assembling-a-genome
-analyzing-the-results-of-the-assembly
+viewing-the-results-of-the-assembly
+quality-checking-the-assembly
 align
 obtaining-a-reference-genome
 aligning-two-samples

@@ -19,17 +19,9 @@ Now we are ready to align the two genomes.
 4. Keep the other parameters default.
 5. Click "Run Tool"
 
+This should take a couple of minutes.
 
-1. Under the “EMBOSS” section on the left side of the page, click “needle”, which is short for “Needleman-Wunsch global alignment”.
-2. For sequence 1, select the reference.
-3. For sequence 2, select the contigs that you produced with Flye. 
-4. Keep the other parameters default. 
-5. After opting for an Email notification, click “Execute”. The algorithm should take a few minutes to run.
+6. In the righthand box labeled "Mummer"..."plot" click the "eye" to view the alignment.
 
-When the algorithm has finished, view its data. This will show the alignment, in which matches are shown with “|” symbols, mismatches are shown with “.” symbols, and indels do not have a symbol between the two rows.
-
-- How many matched symbols does the alignment report? How many gap symbols?
-
-- What do you notice about the ends of the alignment? What do you think happened when the genome was assembled?
-
-- Scroll through the interior of the alignment. Do you notice any regions that appear to be more variable than other regions?
+Diagonal lines indicate sections of the sample genome that align with the reference as in the following example:
+![](https://mummer4.github.io/tutorial/img/dotplot.gif)
