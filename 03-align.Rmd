@@ -4,14 +4,27 @@
 
 To align your assembled genome against a reference genome, we first need to import this reference to Galaxy.
 
-
-import this genome, we will use the “NCBI Accession Download” tool under “Get Data” on the left side of the Galaxy page. 
+1. Select the “NCBI Accession Download” tool under “Get Data” on the left side of the Galaxy page. 
+2. Under “Select source for IDs”, select “Direct Entry”.
+3. Under ID List, type NC_004431.
+4. Click "Run Tool"
 
 ## Aligning two samples 
 
-Now we are ready to align the two genomes. Under the “EMBOSS” section on the left side of the page, click “needle”, which is short for “Needleman-Wunsch global alignment”.
+Now we are ready to align the two genomes. 
 
-For sequence 1, select the contigs that we produced as the result of SPAdes. For sequence 2, select the reference. Keep the other parameters default. After opting for an Email notification, click “Execute”. The algorithm should take a few minutes to run.
+1. Under "Multiple Alignments" select "Mummer"
+2. For sequence 1, select the reference by clicking the "..." and selecting NC_004431.
+3. For sequence 2, select the contigs that you produced with Flye. 
+4. Keep the other parameters default.
+5. Click "Run Tool"
+
+
+1. Under the “EMBOSS” section on the left side of the page, click “needle”, which is short for “Needleman-Wunsch global alignment”.
+2. For sequence 1, select the reference.
+3. For sequence 2, select the contigs that you produced with Flye. 
+4. Keep the other parameters default. 
+5. After opting for an Email notification, click “Execute”. The algorithm should take a few minutes to run.
 
 When the algorithm has finished, view its data. This will show the alignment, in which matches are shown with “|” symbols, mismatches are shown with “.” symbols, and indels do not have a symbol between the two rows.
 

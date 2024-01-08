@@ -72,7 +72,7 @@ Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies,
 
 4. View the HTML report from QUAST by clicking on the 'eye' in the analysis on the right. The Quast tool outputs assembly metrics as an html file with metrics and graphs. 
   - How many contigs (i.e. genome fragments) did your assembly produce? 
-  - What is the total read length? Is this what you expect from your sample?
+  - What is the total read length? Is this what you expect from your sample? (Check out the [reference E. coli](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000007445.1/))
   - What is the [N50](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics) value?
   
 Congratulations! You have assemble a bacterial genome that no one else has ever seen before!
