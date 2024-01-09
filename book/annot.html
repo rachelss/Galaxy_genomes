@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="align.html"/>
-
+<link rel="next" href="gene.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -90,8 +90,7 @@
 <li class="chapter" data-level="3.2" data-path="assembly.html"><a href="assembly.html#getting-started-with-galaxy"><i class="fa fa-check"></i><b>3.2</b> Getting started with Galaxy</a></li>
 <li class="chapter" data-level="3.3" data-path="assembly.html"><a href="assembly.html#getting-your-sequencing-data"><i class="fa fa-check"></i><b>3.3</b> Getting your sequencing data</a></li>
 <li class="chapter" data-level="3.4" data-path="assembly.html"><a href="assembly.html#assembling-a-genome"><i class="fa fa-check"></i><b>3.4</b> Assembling a genome</a></li>
-<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#viewing-the-results-of-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Viewing the results of the assembly</a></li>
-<li class="chapter" data-level="3.6" data-path="assembly.html"><a href="assembly.html#quality-checking-the-assembly"><i class="fa fa-check"></i><b>3.6</b> Quality checking the assembly</a></li>
+<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#quality-checking-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Quality checking the assembly</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="align.html"><a href="align.html"><i class="fa fa-check"></i><b>4</b> Genome Alignment</a>
 <ul>
@@ -100,8 +99,14 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="annot.html"><a href="annot.html"><i class="fa fa-check"></i><b>5</b> Genome Annotation</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="annot.html"><a href="annot.html#annotating"><i class="fa fa-check"></i><b>5.1</b> Annotating</a></li>
+<li class="chapter" data-level="5.1" data-path="annot.html"><a href="annot.html#annotation"><i class="fa fa-check"></i><b>5.1</b> Annotation</a></li>
 <li class="chapter" data-level="5.2" data-path="annot.html"><a href="annot.html#viewing-the-annotation"><i class="fa fa-check"></i><b>5.2</b> Viewing the annotation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="gene.html"><a href="gene.html"><i class="fa fa-check"></i><b>6</b> Working with Target Genes</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="gene.html"><a href="gene.html#finding-gene-locations"><i class="fa fa-check"></i><b>6.1</b> Finding gene locations</a></li>
+<li class="chapter" data-level="6.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>6.2</b> Observing genes in the genome</a></li>
+<li class="chapter" data-level="6.3" data-path="gene.html"><a href="gene.html#aligning-sequences"><i class="fa fa-check"></i><b>6.3</b> Aligning Sequences</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -125,25 +130,24 @@
             <section class="normal" id="section-">
 <div id="annot" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Genome Annotation<a href="annot.html#annot" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="annotating" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Annotating<a href="annot.html#annotating" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="annotation" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Annotation<a href="annot.html#annotation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Finally, we will annotate the genome, meaning that we will identify putative genes and then compare these genes against a database of known genes to find which ones align the best.</p>
 <p>The identification of putative genes can be done in a variety of ways. One way to find these regions requires the observation that regions of DNA that are translated into protein start with a start codon (ATG) and end with a stop codon (TAG, TAA, or TGA). If a genome were random, then after encountering a start codon, we would expect to see a stop codon after about 64/3 ~ 21 codons. But real genes are typically much, much longer than 21 codons. As a result, in simple organisms like viruses and bacteria, a great way to find genes is to look for long stretches of codons connecting a start codon to a stop codon, with no intermediate stop codons.</p>
 <p>Once we have found putative genes along the genome, we can compare them against a database of genes using an algorithm called BLAST.</p>
-<p>These two steps are taken by our next tool, called Prokka, which is used to annotate the genomes of viruses, bacteria, and archaea. It can be found under “Annotation” on Galaxy.</p>
+<p>These two steps are taken by our next tool, called Prokka, which is used to annotate the genomes of viruses, bacteria, and archaea.</p>
 <ol style="list-style-type: decimal">
-<li><p>Under “Contigs to annotate”, select our contigs from the SPAdes run.</p></li>
-<li><p>Set “Kingdom” to “Bacteria” and leave all other parameters to default. Note that Prokka only annotates contigs of length at least 200. Select whether you would like an Email on completion, and click “Run”.</p></li>
+<li>Select Prokka under Genomics Analysis - Annotation on the left.</li>
+<li>Under “Contigs to annotate”, select your contigs from the Flye run.</li>
+<li>Set “Kingdom” to “Bacteria” and leave all other parameters to default. Note that Prokka only annotates contigs of length at least 200.</li>
+<li>Click “Run”.</li>
 </ol>
-<p>The entire process of annotating our genome should not take more than a few seconds. Isn’t bioinformatics great?</p>
+<p>The entire process of annotating your genome should not take more than a few minutes.</p>
 <p>Prokka produces a collection of output files in the history on the right.
 - The .fna file contains the contigs included in the annotation.
 - The .gff file contains regions identified by Prokka as genes.
 - The .ffn file contains nucleotide sequences of the annotated genes, and the .faa file contains their translated amino acid sequences.</p>
 <p>More detailed descriptions of the outputs can be found at <a href="https://github.com/tseemann/prokka#output-files" class="uri">https://github.com/tseemann/prokka#output-files</a></p>
-<ol start="3" style="list-style-type: decimal">
-<li>View the .gff file containing regions identified by Prokka as putative genes. How many are there? What is the longest and shortest one?</li>
-</ol>
 </div>
 <div id="viewing-the-annotation" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Viewing the annotation<a href="annot.html#viewing-the-annotation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -155,15 +159,13 @@
 <li>Click “insert track group” and then “insert annotation track”</li>
 <li>Under “GFF/GFF3/BED Track Data” select the .gff file from the prokka annotation outputs</li>
 <li>Click “Run tool”</li>
-<li>Make sure to have both boxes under “Available Tracks” checked on</li>
+<li>JBrowse should be very quick. When it is finished, click view file, which is an HTML file that we can view in the browser. (It may take a moment to load.)
+8 . On the left side of the page, click on “Prokka on data XXX: gff” to show our annotation of the genome.</li>
 </ol>
-<p>JBrowse should be very quick. When it is finished, click view file, which is an HTML file that we can view in the browser. (It may take a moment to load.)</p>
-<p>It seems like nothing is there, but on the left side of the page, click on “Prokka on data XXX: gff” to show our annotation of the genome. Zoom out to see it. The arrows point in the direction to indicate which strand of the genome the gene is found on.</p>
-<p>You can click on the genes as you like to obtain information about their length and what in the database they were found to be similar to (if anything). The annotation score of a protein represents how much experimental evidence backing up this protein. A high score means that if we find a putative gene that is a hit against it, we have a high degree of certainty that our gene serves a similar function.</p>
 <ul>
-<li>Why do you think that some genes are labeled “hypothetical proteins”?</li>
+<li>The arrows point in the direction to indicate which strand of the genome the gene is found on.</li>
+<li>Click on a gene to obtain information about its length and what in the database it was similar to (if anything).</li>
 </ul>
-<p>Now we can start investigating the bacteria’s individual genes. Which one should we focus on? How has the gene mutated as the virus spread around the world? And how do these mutations affect the function of the protein?</p>
 
 </div>
 </div>
@@ -172,8 +174,8 @@
           </div>
         </div>
       </div>
-<a href="align.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="align.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gene.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

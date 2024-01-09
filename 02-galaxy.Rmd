@@ -36,14 +36,12 @@ Ask the instructor about uploading the data from your sample onto Galaxy.
 
 ## Assembling a genome
 
-Now that we understand our data a bit better, we are ready to assemble the genome from our data using Flye 
-Under Genomic File Manipulation - Nanopore on the left side of the page, you will see various tools. 
+Now that we understand our data a bit better, we are ready to assemble the genome from our data using Flye.
+
+1. Under Genomic File Manipulation - Nanopore on the left side of the page, you will see various tools. 
 Click on Flye, which will take you to its homepage.
-
-You need to select the data that Flye will use to assemble your genome.
-
-- Under Input reads, click on the Multiple Datasets button. 
-- Click the drop down arrow and select each dataset one at a time.
+2. You need to select the data that Flye will use to assemble your genome. Under Input reads, click on the Multiple Datasets button. 
+3. Click the drop down arrow and select each dataset one at a time.
 
 Leave all the remaining parameters as default.
 
@@ -51,16 +49,11 @@ Click Run!
 
 The assembly will show up as green in your history when it has completed. This should take ~10-30 minutes depending on the size of the genome.
 
-## Viewing the results of the assembly
+## Quality checking the assembly
 
 Now that Flye has completed, we will analyze the results. 
 
-
-
-## Quality checking the assembly
-
 Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies, and can also be used to compare multiple assemblies. The tool can also take an optional reference file as input, and will provide complementary metrics. QUAST stands for QUality ASsessment Tool. 
-
 1. From the left menus select Genomics Analysis - Assembly - Quast
 
 2. Set parameters as
@@ -72,7 +65,7 @@ Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies,
 
 4. View the HTML report from QUAST by clicking on the 'eye' in the analysis on the right. The Quast tool outputs assembly metrics as an html file with metrics and graphs. 
   - How many contigs (i.e. genome fragments) did your assembly produce? 
-  - What is the total read length? Is this what you expect from your sample? (Check out the [reference E. coli](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000007445.1/))
+  - What is the total read length? Is this what you expect from your sample? (Check out the [reference E. coli](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000007445.1/) or the [reference H. parainfluenzae](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_031191205.1/))
   - What is the [N50](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics) value?
   
 Congratulations! You have assemble a bacterial genome that no one else has ever seen before!

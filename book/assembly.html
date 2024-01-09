@@ -90,8 +90,7 @@
 <li class="chapter" data-level="3.2" data-path="assembly.html"><a href="assembly.html#getting-started-with-galaxy"><i class="fa fa-check"></i><b>3.2</b> Getting started with Galaxy</a></li>
 <li class="chapter" data-level="3.3" data-path="assembly.html"><a href="assembly.html#getting-your-sequencing-data"><i class="fa fa-check"></i><b>3.3</b> Getting your sequencing data</a></li>
 <li class="chapter" data-level="3.4" data-path="assembly.html"><a href="assembly.html#assembling-a-genome"><i class="fa fa-check"></i><b>3.4</b> Assembling a genome</a></li>
-<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#viewing-the-results-of-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Viewing the results of the assembly</a></li>
-<li class="chapter" data-level="3.6" data-path="assembly.html"><a href="assembly.html#quality-checking-the-assembly"><i class="fa fa-check"></i><b>3.6</b> Quality checking the assembly</a></li>
+<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#quality-checking-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Quality checking the assembly</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="align.html"><a href="align.html"><i class="fa fa-check"></i><b>4</b> Genome Alignment</a>
 <ul>
@@ -100,8 +99,14 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="annot.html"><a href="annot.html"><i class="fa fa-check"></i><b>5</b> Genome Annotation</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="annot.html"><a href="annot.html#annotating"><i class="fa fa-check"></i><b>5.1</b> Annotating</a></li>
+<li class="chapter" data-level="5.1" data-path="annot.html"><a href="annot.html#annotation"><i class="fa fa-check"></i><b>5.1</b> Annotation</a></li>
 <li class="chapter" data-level="5.2" data-path="annot.html"><a href="annot.html#viewing-the-annotation"><i class="fa fa-check"></i><b>5.2</b> Viewing the annotation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="gene.html"><a href="gene.html"><i class="fa fa-check"></i><b>6</b> Working with Target Genes</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="gene.html"><a href="gene.html#finding-gene-locations"><i class="fa fa-check"></i><b>6.1</b> Finding gene locations</a></li>
+<li class="chapter" data-level="6.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>6.2</b> Observing genes in the genome</a></li>
+<li class="chapter" data-level="6.3" data-path="gene.html"><a href="gene.html#aligning-sequences"><i class="fa fa-check"></i><b>6.3</b> Aligning Sequences</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -161,28 +166,24 @@ Ask the instructor about uploading the data from your sample onto Galaxy.</p></l
 </div>
 <div id="assembling-a-genome" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> Assembling a genome<a href="assembly.html#assembling-a-genome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Now that we understand our data a bit better, we are ready to assemble the genome from our data using Flye
-Under Genomic File Manipulation - Nanopore on the left side of the page, you will see various tools.
-Click on Flye, which will take you to its homepage.</p>
-<p>You need to select the data that Flye will use to assemble your genome.</p>
-<ul>
-<li>Under Input reads, click on the Multiple Datasets button.</li>
+<p>Now that we understand our data a bit better, we are ready to assemble the genome from our data using Flye.</p>
+<ol style="list-style-type: decimal">
+<li>Under Genomic File Manipulation - Nanopore on the left side of the page, you will see various tools.
+Click on Flye, which will take you to its homepage.</li>
+<li>You need to select the data that Flye will use to assemble your genome. Under Input reads, click on the Multiple Datasets button.</li>
 <li>Click the drop down arrow and select each dataset one at a time.</li>
-</ul>
+</ol>
 <p>Leave all the remaining parameters as default.</p>
 <p>Click Run!</p>
 <p>The assembly will show up as green in your history when it has completed. This should take ~10-30 minutes depending on the size of the genome.</p>
 </div>
-<div id="viewing-the-results-of-the-assembly" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Viewing the results of the assembly<a href="assembly.html#viewing-the-results-of-the-assembly" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quality-checking-the-assembly" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Quality checking the assembly<a href="assembly.html#quality-checking-the-assembly" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that Flye has completed, we will analyze the results.</p>
-</div>
-<div id="quality-checking-the-assembly" class="section level2 hasAnchor" number="3.6">
-<h2><span class="header-section-number">3.6</span> Quality checking the assembly<a href="assembly.html#quality-checking-the-assembly" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies, and can also be used to compare multiple assemblies. The tool can also take an optional reference file as input, and will provide complementary metrics. QUAST stands for QUality ASsessment Tool.</p>
-<ol style="list-style-type: decimal">
-<li><p>From the left menus select Genomics Analysis - Assembly - Quast</p></li>
-<li><p>Set parameters as</p></li>
+<p>Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies, and can also be used to compare multiple assemblies. The tool can also take an optional reference file as input, and will provide complementary metrics. QUAST stands for QUality ASsessment Tool.
+1. From the left menus select Genomics Analysis - Assembly - Quast</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Set parameters as</li>
 </ol>
 <ul>
 <li>Assembly Mode: Individual</li>
@@ -195,7 +196,7 @@ Click on Flye, which will take you to its homepage.</p>
 </ol>
 <ul>
 <li>How many contigs (i.e. genome fragments) did your assembly produce?</li>
-<li>What is the total read length? Is this what you expect from your sample? (Check out the <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000007445.1/">reference E. coli</a>)</li>
+<li>What is the total read length? Is this what you expect from your sample? (Check out the <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000007445.1/">reference E. coli</a> or the <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_031191205.1/">reference H. parainfluenzae</a>)</li>
 <li>What is the <a href="https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics">N50</a> value?</li>
 </ul>
 <p>Congratulations! You have assemble a bacterial genome that no one else has ever seen before!</p>

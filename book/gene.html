@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Genome Alignment | Galaxy Bacterial Genomics Workshop</title>
+  <title>Chapter 6 Working with Target Genes | Galaxy Bacterial Genomics Workshop</title>
   <meta name="description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Genome Alignment | Galaxy Bacterial Genomics Workshop" />
+  <meta property="og:title" content="Chapter 6 Working with Target Genes | Galaxy Bacterial Genomics Workshop" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
   <meta name="github-repo" content="rachelss/Galaxy_genomes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Genome Alignment | Galaxy Bacterial Genomics Workshop" />
+  <meta name="twitter:title" content="Chapter 6 Working with Target Genes | Galaxy Bacterial Genomics Workshop" />
   
   <meta name="twitter:description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="assembly.html"/>
-<link rel="next" href="annot.html"/>
+<link rel="prev" href="annot.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -128,34 +128,39 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="align" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Genome Alignment<a href="align.html#align" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="obtaining-a-reference-genome" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Obtaining a reference genome<a href="align.html#obtaining-a-reference-genome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To align your assembled genome against a reference genome, we first need to import this reference to Galaxy.</p>
+<div id="gene" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Working with Target Genes<a href="gene.html#gene" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="finding-gene-locations" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Finding gene locations<a href="gene.html#finding-gene-locations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Select the “NCBI Accession Download” tool under “Get Data” on the left side of the Galaxy page.</li>
-<li>Under “Select source for IDs”, select “Direct Entry”.</li>
-<li>Under ID List, type NC_004431 (for E. coli) or NZ_CP133470.1 (for H. para).</li>
-<li>Click “Run Tool”</li>
+<li>Open the .gbk file from the prokka annotation outputs</li>
+<li>At the top, press “show all”</li>
+<li>Use CTRL + F to search for the rpoS gene by typing /gene=“rpoS”</li>
+<li>Locate the gene on the file and note the CDS position on the line immediately above the gene name</li>
+<li>Scroll up the file to determine which contig the gene is located on. Before the genes are listed, there is a section of identifying information about the contig.</li>
 </ol>
 </div>
-<div id="aligning-two-samples" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Aligning two samples<a href="align.html#aligning-two-samples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Now we are ready to align the two genomes.</p>
+<div id="observing-genes-in-the-genome" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Observing genes in the genome<a href="gene.html#observing-genes-in-the-genome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Under “Multiple Alignments” select “Mummer”</li>
-<li>For sequence 1, select the reference by clicking the “…” and selecting NC_004431.</li>
-<li>For sequence 2, select the contigs that you produced with Flye.</li>
-<li>Keep the other parameters default.</li>
-<li>Click “Run Tool”</li>
+<li>Go back to Jbrowse</li>
+<li>Navigate to the target contig using the drop down menu in the center top.</li>
+<li>In the search bar, input the target region in the format of “contig_x:XX..XX” where x is the contig number and XX..XX is the CDS region.</li>
+<li>Zoom in to look at the sequence of the gene</li>
 </ol>
-<p>This should take a couple of minutes.</p>
-<ol start="6" style="list-style-type: decimal">
-<li>In the righthand box labeled “Mummer”…“plot” click the “eye” to view the alignment.</li>
+</div>
+<div id="aligning-sequences" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Aligning Sequences<a href="gene.html#aligning-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Open Jbrowse for the two strains you are comparing against</li>
+<li>Navigate to the desired gene location using the steps above</li>
+<li>Click on the gene and download the FASTA file by pressing the “FASTA” button</li>
+<li>Upload the downloaded sequences into Galaxy</li>
+<li>Open needle (left side of screen: Genomic Toolkits &gt; EMBOSS &gt; needle)</li>
+<li>Insert the sequences under “Sequence 1” and “Sequence 2”</li>
+<li>Click “Run tool”</li>
+<li>View the alignment</li>
 </ol>
-<p>Diagonal lines indicate sections of the sample genome that align with the reference as in the following example:</p>
-<p><img src="https://mummer4.github.io/tutorial/img/dotplot.gif" /></p>
 
 </div>
 </div>
@@ -164,8 +169,8 @@
           </div>
         </div>
       </div>
-<a href="assembly.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="annot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="annot.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -196,7 +201,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-align.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-genes.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -1,0 +1,30 @@
+# Working with Target Genes {#gene}
+
+## Finding gene locations
+
+1. Open the .gbk file from the prokka annotation outputs
+2. At the top, press “show all” 
+3. Use CTRL + F to search for the rpoS gene by typing /gene="rpoS"
+4. Locate the gene on the file and note the CDS position on the line immediately above the gene name
+5. Scroll up the file to determine which contig the gene is located on. Before the genes are listed, there is a section of identifying information about the contig.
+
+## Observing genes in the genome
+
+1. Go back to Jbrowse
+2. Navigate to the target contig using the drop down menu in the center top. 
+3. In the search bar, input the target region in the format of “contig_x:XX..XX” where x is the contig number and XX..XX is the CDS region. 
+4. Zoom in to look at the sequence of the gene
+
+## Aligning Sequences
+
+1. Open Jbrowse for the two strains you are comparing against
+2. Navigate to the desired gene location using the steps above
+3. Click on the gene and download the FASTA file by pressing the “FASTA” button
+4. Upload the downloaded sequences into Galaxy
+5. Open needle (left side of screen: Genomic Toolkits > EMBOSS > needle)
+5. Insert the sequences under “Sequence 1” and “Sequence 2”
+6. Click “Run tool”
+7. View the alignment
+
+
+

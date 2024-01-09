@@ -6,7 +6,7 @@ To align your assembled genome against a reference genome, we first need to impo
 
 1. Select the “NCBI Accession Download” tool under “Get Data” on the left side of the Galaxy page. 
 2. Under “Select source for IDs”, select “Direct Entry”.
-3. Under ID List, type NC_004431.
+3. Under ID List, type NC_004431 (for E. coli) or NZ_CP133470.1	(for H. para).
 4. Click "Run Tool"
 
 ## Aligning two samples 
@@ -24,4 +24,5 @@ This should take a couple of minutes.
 6. In the righthand box labeled "Mummer"..."plot" click the "eye" to view the alignment.
 
 Diagonal lines indicate sections of the sample genome that align with the reference as in the following example:
+
 ![](https://mummer4.github.io/tutorial/img/dotplot.gif)

@@ -1,6 +1,6 @@
 # Genome Annotation {#annot}
 
-## Annotating
+## Annotation
 
 Finally, we will annotate the genome, meaning that we will identify putative genes and then compare these genes against a database of known genes to find which ones align the best.
 
@@ -8,13 +8,14 @@ The identification of putative genes can be done in a variety of ways. One way t
 
 Once we have found putative genes along the genome, we can compare them against a database of genes using an algorithm called BLAST.
 
-These two steps are taken by our next tool, called Prokka, which is used to annotate the genomes of viruses, bacteria, and archaea. It can be found under “Annotation” on Galaxy. 
+These two steps are taken by our next tool, called Prokka, which is used to annotate the genomes of viruses, bacteria, and archaea.
 
-1. Under “Contigs to annotate”, select our contigs from the SPAdes run. 
+1. Select Prokka under Genomics Analysis - Annotation on the left. 
+2. Under “Contigs to annotate”, select your contigs from the Flye run. 
+3. Set “Kingdom” to “Bacteria” and leave all other parameters to default. Note that Prokka only annotates contigs of length at least 200.
+4. Click “Run”.
 
-2. Set “Kingdom” to “Bacteria” and leave all other parameters to default. Note that Prokka only annotates contigs of length at least 200. Select whether you would like an Email on completion, and click “Run”.
-
-The entire process of annotating our genome should not take more than a few seconds. Isn’t bioinformatics great?
+The entire process of annotating your genome should not take more than a few minutes.
 
 Prokka produces a collection of output files in the history on the right. 
 - The .fna file contains the contigs included in the annotation.
@@ -22,8 +23,6 @@ Prokka produces a collection of output files in the history on the right.
 - The .ffn file contains nucleotide sequences of the annotated genes, and the .faa file contains their translated amino acid sequences.
 
 More detailed descriptions of the outputs can be found at https://github.com/tseemann/prokka#output-files
-
-3. View the .gff file containing regions identified by Prokka as putative genes. How many are there? What is the longest and shortest one?
 
 ## Viewing the annotation
 
@@ -35,14 +34,7 @@ Prokka contains the annotation information in these files, but what a biologist 
 4. Click “insert track group” and then “insert annotation track”
 5. Under “GFF/GFF3/BED Track Data” select the .gff file from the prokka annotation outputs
 6. Click “Run tool”
-7. Make sure to have both boxes under “Available Tracks” checked on
-
-JBrowse should be very quick. When it is finished, click view file, which is an HTML file that we can view in the browser. (It may take a moment to load.)
-
-It seems like nothing is there, but on the left side of the page, click on “Prokka on data XXX: gff” to show our  annotation of the genome. Zoom out to see it. The arrows point in the direction to indicate which strand of the genome the gene is found on. 
-
-You can click on the genes as you like to obtain information about their length and what in the database they were found to be similar to (if anything). The annotation score of a protein represents how much experimental evidence backing up this protein. A high score means that if we find a putative gene that is a hit against it, we have a high degree of certainty that our gene serves a similar function.
-
-- Why do you think that some genes are labeled “hypothetical proteins”?
-
-Now  we can start investigating the bacteria’s individual genes. Which one should we focus on? How has the gene mutated as the virus spread around the world? And how do these mutations affect the function of the protein?
+7. JBrowse should be very quick. When it is finished, click view file, which is an HTML file that we can view in the browser. (It may take a moment to load.)
+8 . On the left side of the page, click on “Prokka on data XXX: gff” to show our annotation of the genome. 
+  - The arrows point in the direction to indicate which strand of the genome the gene is found on. 
+  - Click on a gene to obtain information about its length and what in the database it was similar to (if anything). 

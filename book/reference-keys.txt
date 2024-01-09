@@ -9,11 +9,14 @@ data
 getting-started-with-galaxy
 getting-your-sequencing-data
 assembling-a-genome
-viewing-the-results-of-the-assembly
 quality-checking-the-assembly
 align
 obtaining-a-reference-genome
 aligning-two-samples
 annot
-annotating
+annotation
 viewing-the-annotation
+gene
+finding-gene-locations
+observing-genes-in-the-genome
+aligning-sequences
