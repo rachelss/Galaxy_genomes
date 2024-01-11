@@ -17,6 +17,13 @@ annot
 annotation
 viewing-the-annotation
 gene
+target-genes-in-with-a-personal-computer-if-web-only-skip-to-6.2
+download-and-install-jbrowse
+obtaining-the-data-from-galaxy
+your-genome-in-jbrowse-desktop
+annotation-in-jbrowse-desktop
+finding-genes-in-jbrowse-desktop
+target-genes-in-galaxy-skip-this-if-using-jbrowse-on-your-computer
 finding-gene-locations
 observing-genes-in-the-genome
-aligning-sequences
+comparing-genes-between-strains

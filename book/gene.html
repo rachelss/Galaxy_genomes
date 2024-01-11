@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2024-01-08" />
+<meta name="date" content="2024-01-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -104,9 +104,20 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="gene.html"><a href="gene.html"><i class="fa fa-check"></i><b>6</b> Working with Target Genes</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="gene.html"><a href="gene.html#finding-gene-locations"><i class="fa fa-check"></i><b>6.1</b> Finding gene locations</a></li>
-<li class="chapter" data-level="6.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>6.2</b> Observing genes in the genome</a></li>
-<li class="chapter" data-level="6.3" data-path="gene.html"><a href="gene.html#aligning-sequences"><i class="fa fa-check"></i><b>6.3</b> Aligning Sequences</a></li>
+<li class="chapter" data-level="6.1" data-path="gene.html"><a href="gene.html#target-genes-in-with-a-personal-computer-if-web-only-skip-to-6.2"><i class="fa fa-check"></i><b>6.1</b> Target genes in with a personal computer (if web-only skip to 6.2)</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="gene.html"><a href="gene.html#download-and-install-jbrowse"><i class="fa fa-check"></i><b>6.1.1</b> Download and install Jbrowse</a></li>
+<li class="chapter" data-level="6.1.2" data-path="gene.html"><a href="gene.html#obtaining-the-data-from-galaxy"><i class="fa fa-check"></i><b>6.1.2</b> Obtaining the data from Galaxy</a></li>
+<li class="chapter" data-level="6.1.3" data-path="gene.html"><a href="gene.html#your-genome-in-jbrowse-desktop"><i class="fa fa-check"></i><b>6.1.3</b> Your genome in Jbrowse Desktop</a></li>
+<li class="chapter" data-level="6.1.4" data-path="gene.html"><a href="gene.html#annotation-in-jbrowse-desktop"><i class="fa fa-check"></i><b>6.1.4</b> Annotation in Jbrowse Desktop</a></li>
+<li class="chapter" data-level="6.1.5" data-path="gene.html"><a href="gene.html#finding-genes-in-jbrowse-desktop"><i class="fa fa-check"></i><b>6.1.5</b> Finding genes in Jbrowse desktop</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="gene.html"><a href="gene.html#target-genes-in-galaxy-skip-this-if-using-jbrowse-on-your-computer"><i class="fa fa-check"></i><b>6.2</b> Target genes in Galaxy (skip this if using JBrowse on your computer)</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="gene.html"><a href="gene.html#finding-gene-locations"><i class="fa fa-check"></i><b>6.2.1</b> Finding gene locations</a></li>
+<li class="chapter" data-level="6.2.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>6.2.2</b> Observing genes in the genome</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="gene.html"><a href="gene.html#comparing-genes-between-strains"><i class="fa fa-check"></i><b>6.3</b> Comparing genes between strains</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -130,8 +141,63 @@
             <section class="normal" id="section-">
 <div id="gene" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Working with Target Genes<a href="gene.html#gene" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="finding-gene-locations" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Finding gene locations<a href="gene.html#finding-gene-locations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="target-genes-in-with-a-personal-computer-if-web-only-skip-to-6.2" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Target genes in with a personal computer (if web-only skip to 6.2)<a href="gene.html#target-genes-in-with-a-personal-computer-if-web-only-skip-to-6.2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="download-and-install-jbrowse" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Download and install Jbrowse<a href="gene.html#download-and-install-jbrowse" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Download Jbrowse from <a href="https://jbrowse.org/jb2/download/" class="uri">https://jbrowse.org/jb2/download/</a> according to your operating system</p>
+</div>
+<div id="obtaining-the-data-from-galaxy" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Obtaining the data from Galaxy<a href="gene.html#obtaining-the-data-from-galaxy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In Galaxy</p>
+<ol style="list-style-type: decimal">
+<li>Click on the Prokka fna on the righthand menu (history)</li>
+<li>Click the “save” icon and save the file to your computer</li>
+<li>Repeat steps 1-2 with the gff file</li>
+</ol>
+</div>
+<div id="your-genome-in-jbrowse-desktop" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Your genome in Jbrowse Desktop<a href="gene.html#your-genome-in-jbrowse-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Open JBrowse on your computer</li>
+<li>Click “Open Sequence File”</li>
+<li>Add a name for your Assembly</li>
+<li>From the drop-down select “FastaAdapter”</li>
+<li>Click “Choose File” and select your fna/fasta file</li>
+<li>Click Submit</li>
+<li>Click “Launch View”</li>
+<li>Click “Open”</li>
+<li>Click “Open Track Selector” and check the box for Reference Sequence</li>
+</ol>
+</div>
+<div id="annotation-in-jbrowse-desktop" class="section level3 hasAnchor" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Annotation in Jbrowse Desktop<a href="gene.html#annotation-in-jbrowse-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Click the orange plus in the lower right</li>
+<li>Under Main File click “File”</li>
+<li>Click “Choose File” and select your gff file</li>
+<li>Click Next</li>
+<li>Use the trash icons to remove all data from the excluded list</li>
+<li>Click Add</li>
+<li>Close the right-hand windows</li>
+</ol>
+</div>
+<div id="finding-genes-in-jbrowse-desktop" class="section level3 hasAnchor" number="6.1.5">
+<h3><span class="header-section-number">6.1.5</span> Finding genes in Jbrowse desktop<a href="gene.html#finding-genes-in-jbrowse-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Take a look at the genes (in orange) labeled in the region of the genome you can observe here. You can click on them for detail and scroll for additional regions of the genome.</li>
+<li>In the box in the upper center (currently containing a contig and region) delete the existing information and type “rpoA_1” (don’t include the quotes)</li>
+<li>Click on the gene to view it</li>
+<li>Click on the orange bar below the sequence to view the gene in the right-hand panel.</li>
+<li>Click “Show feature sequence” and copy it</li>
+<li>Paste the sequence in a plain text document on your computer (not Word!!!)</li>
+</ol>
+</div>
+</div>
+<div id="target-genes-in-galaxy-skip-this-if-using-jbrowse-on-your-computer" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Target genes in Galaxy (skip this if using JBrowse on your computer)<a href="gene.html#target-genes-in-galaxy-skip-this-if-using-jbrowse-on-your-computer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-gene-locations" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Finding gene locations<a href="gene.html#finding-gene-locations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Open the .gbk file from the prokka annotation outputs</li>
 <li>At the top, press “show all”</li>
@@ -140,26 +206,29 @@
 <li>Scroll up the file to determine which contig the gene is located on. Before the genes are listed, there is a section of identifying information about the contig.</li>
 </ol>
 </div>
-<div id="observing-genes-in-the-genome" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Observing genes in the genome<a href="gene.html#observing-genes-in-the-genome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="observing-genes-in-the-genome" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Observing genes in the genome<a href="gene.html#observing-genes-in-the-genome" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Go back to Jbrowse</li>
 <li>Navigate to the target contig using the drop down menu in the center top.</li>
 <li>In the search bar, input the target region in the format of “contig_x:XX..XX” where x is the contig number and XX..XX is the CDS region.</li>
-<li>Zoom in to look at the sequence of the gene</li>
+<li>Use the plus and minus buttons to zoom in and out, and the arrows to move left or right (or click and drag within the window to move left or right).</li>
+<li>Zoom in to see the reference sequence at the top. JBrowse displays the sequence and a 6-frame amino acid translation.</li>
 </ol>
 </div>
-<div id="aligning-sequences" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Aligning Sequences<a href="gene.html#aligning-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="comparing-genes-between-strains" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Comparing genes between strains<a href="gene.html#comparing-genes-between-strains" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Open Jbrowse for the two strains you are comparing against</li>
-<li>Navigate to the desired gene location using the steps above</li>
-<li>Click on the gene and download the FASTA file by pressing the “FASTA” button</li>
-<li>Upload the downloaded sequences into Galaxy</li>
+<li>Repeat all of the above steps (either 6.1 or 6.2) for the true reference genome to which you want to compare your sample and paste this sequence in a new plain text document. Make sure that the names of the sequences are useful and different!</li>
 <li>Open needle (left side of screen: Genomic Toolkits &gt; EMBOSS &gt; needle)</li>
-<li>Insert the sequences under “Sequence 1” and “Sequence 2”</li>
+<li>For Sequence 1 select the …</li>
+<li>Click the Upload button</li>
+<li>Click Paste/Fetch data</li>
+<li>Paste the sequence</li>
+<li>Repeat steps 2-6 for sequence 2.</li>
 <li>Click “Run tool”</li>
-<li>View the alignment</li>
+<li>View the alignment and examine for differences between the sequences</li>
 </ol>
 
 </div>

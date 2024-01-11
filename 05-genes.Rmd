@@ -1,6 +1,53 @@
 # Working with Target Genes {#gene}
 
-## Finding gene locations
+## Target genes in with a personal computer (if web-only skip to 6.2)
+
+### Download and install Jbrowse
+
+Download Jbrowse from https://jbrowse.org/jb2/download/ according to your operating system
+
+### Obtaining the data from Galaxy
+
+In Galaxy
+
+1. Click on the Prokka fna on the righthand menu (history)
+2. Click the "save" icon and save the file to your computer
+3. Repeat steps 1-2 with the gff file
+
+### Your genome in Jbrowse Desktop
+
+1. Open JBrowse on your computer
+2. Click "Open Sequence File"
+3. Add a name for your Assembly
+4. From the drop-down select "FastaAdapter"
+5. Click "Choose File" and select your fna/fasta file
+6. Click Submit
+7. Click "Launch View"
+8. Click "Open"
+9. Click "Open Track Selector" and check the box for Reference Sequence
+
+### Annotation in Jbrowse Desktop
+
+1. Click the orange plus in the lower right
+2. Under Main File click "File"
+3. Click "Choose File" and select your gff file
+4. Click Next
+5. Use the trash icons to remove all data from the excluded list
+6. Click Add
+7. Close the right-hand windows
+
+### Finding genes in Jbrowse desktop
+
+1. Take a look at the genes (in orange) labeled in the region of the genome you can observe here. You can click on them for detail and scroll for additional regions of the genome.
+2. In the box in the upper center (currently containing a contig and region) delete the existing information and type "rpoA_1" (don't include the quotes)
+3. Click on the gene to view it
+4. Click on the orange bar below the sequence to view the gene in the right-hand panel.
+5. Click "Show feature sequence" and copy it 
+6. Paste the sequence in a plain text document on your computer (not Word!!!)
+
+## Target genes in Galaxy (skip this if using JBrowse on your computer)
+
+### Finding gene locations
 
 1. Open the .gbk file from the prokka annotation outputs
 2. At the top, press “show all” 
@@ -8,23 +55,23 @@
 4. Locate the gene on the file and note the CDS position on the line immediately above the gene name
 5. Scroll up the file to determine which contig the gene is located on. Before the genes are listed, there is a section of identifying information about the contig.
 
-## Observing genes in the genome
+### Observing genes in the genome
 
 1. Go back to Jbrowse
 2. Navigate to the target contig using the drop down menu in the center top. 
 3. In the search bar, input the target region in the format of “contig_x:XX..XX” where x is the contig number and XX..XX is the CDS region. 
-4. Zoom in to look at the sequence of the gene
+4. Use the plus and minus buttons to zoom in and out, and the arrows to move left or right (or click and drag within the window to move left or right).
+5. Zoom in to see the reference sequence at the top. JBrowse displays the sequence and a 6-frame amino acid translation.
 
-## Aligning Sequences
+## Comparing genes between strains
 
-1. Open Jbrowse for the two strains you are comparing against
-2. Navigate to the desired gene location using the steps above
-3. Click on the gene and download the FASTA file by pressing the “FASTA” button
-4. Upload the downloaded sequences into Galaxy
-5. Open needle (left side of screen: Genomic Toolkits > EMBOSS > needle)
-5. Insert the sequences under “Sequence 1” and “Sequence 2”
-6. Click “Run tool”
-7. View the alignment
-
-
+1. Repeat all of the above steps (either 6.1 or 6.2) for the true reference genome to which you want to compare your sample and paste this sequence in a new plain text document. Make sure that the names of the sequences are useful and different!
+2. Open needle (left side of screen: Genomic Toolkits > EMBOSS > needle)
+3. For Sequence 1 select the ...
+4. Click the Upload button
+5. Click Paste/Fetch data
+6. Paste the sequence
+7. Repeat steps 2-6 for sequence 2.
+8. Click “Run tool”
+9. View the alignment and examine for differences between the sequences
 
