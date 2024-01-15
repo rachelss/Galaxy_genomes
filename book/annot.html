@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2024-01-11" />
+<meta name="date" content="2024-01-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -118,6 +118,7 @@
 <li class="chapter" data-level="6.2.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>6.2.2</b> Observing genes in the genome</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="gene.html"><a href="gene.html#comparing-genes-between-strains"><i class="fa fa-check"></i><b>6.3</b> Comparing genes between strains</a></li>
+<li class="chapter" data-level="6.4" data-path="gene.html"><a href="gene.html#more-genes"><i class="fa fa-check"></i><b>6.4</b> More genes</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -143,7 +144,7 @@
 <h1><span class="header-section-number">Chapter 5</span> Genome Annotation<a href="annot.html#annot" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="annotation" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Annotation<a href="annot.html#annotation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Finally, we will annotate the genome, meaning that we will identify putative genes and then compare these genes against a database of known genes to find which ones align the best.</p>
+<p>Annotating the genome means that we will identify putative genes and then compare these genes against a database of known genes to find which ones align the best (so we can attach names to them).</p>
 <p>The identification of putative genes can be done in a variety of ways. One way to find these regions requires the observation that regions of DNA that are translated into protein start with a start codon (ATG) and end with a stop codon (TAG, TAA, or TGA). If a genome were random, then after encountering a start codon, we would expect to see a stop codon after about 64/3 ~ 21 codons. But real genes are typically much, much longer than 21 codons. As a result, in simple organisms like viruses and bacteria, a great way to find genes is to look for long stretches of codons connecting a start codon to a stop codon, with no intermediate stop codons.</p>
 <p>Once we have found putative genes along the genome, we can compare them against a database of genes using an algorithm called BLAST.</p>
 <p>These two steps are taken by our next tool, called Prokka, which is used to annotate the genomes of viruses, bacteria, and archaea.</p>
@@ -154,15 +155,17 @@
 <li>Click “Run”.</li>
 </ol>
 <p>The entire process of annotating your genome should not take more than a few minutes.</p>
-<p>Prokka produces a collection of output files in the history on the right.
-- The .fna file contains the contigs included in the annotation.
-- The .gff file contains regions identified by Prokka as genes.
-- The .ffn file contains nucleotide sequences of the annotated genes, and the .faa file contains their translated amino acid sequences.</p>
+<p>Prokka produces a collection of output files in the history on the right.</p>
+<ul>
+<li>The .fna file contains the contigs included in the annotation.</li>
+<li>The .gff file contains regions identified by Prokka as genes.</li>
+<li>The .ffn file contains nucleotide sequences of the annotated genes, and the .faa file contains their translated amino acid sequences.</li>
+</ul>
 <p>More detailed descriptions of the outputs can be found at <a href="https://github.com/tseemann/prokka#output-files" class="uri">https://github.com/tseemann/prokka#output-files</a></p>
 </div>
 <div id="viewing-the-annotation" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Viewing the annotation<a href="annot.html#viewing-the-annotation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Prokka contains the annotation information in these files, but what a biologist would really like is a visualization of its genes and what they have been predicted to be. So to visualize our annotation contained in the .gff file, we will use a genome browser tool called “JBrowse”</p>
+<p>Prokka contains the annotation information in these files, but what a biologist would really like is a visualization of its genes and what they have been predicted to be. To visualize our annotation contained in the .gff file, we will use a genome browser tool called “JBrowse”</p>
 <ol style="list-style-type: decimal">
 <li>Click (on the left side of screen) “Statistics and Visualization” &gt; “Graph/Display data” &gt; “Jbrowse”</li>
 <li>Under “Reference genome to display” select “use genome from history”</li>
@@ -170,8 +173,8 @@
 <li>Click “insert track group” and then “insert annotation track”</li>
 <li>Under “GFF/GFF3/BED Track Data” select the .gff file from the prokka annotation outputs</li>
 <li>Click “Run tool”</li>
-<li>JBrowse should be very quick. When it is finished, click view file, which is an HTML file that we can view in the browser. (It may take a moment to load.)
-8 . On the left side of the page, click on “Prokka on data XXX: gff” to show our annotation of the genome.</li>
+<li>JBrowse should be very quick. When it is finished, click view file, which is an HTML file that we can view in the browser. (It may take a moment to load.)</li>
+<li>On the left side of the page, click on “Prokka on data XXX: gff” to show our annotation of the genome.</li>
 </ol>
 <ul>
 <li>The arrows point in the direction to indicate which strand of the genome the gene is found on.</li>

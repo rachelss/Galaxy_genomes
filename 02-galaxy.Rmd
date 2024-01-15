@@ -54,6 +54,7 @@ The assembly will show up as green in your history when it has completed. This s
 Now that Flye has completed, we will analyze the results. 
 
 Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies, and can also be used to compare multiple assemblies. The tool can also take an optional reference file as input, and will provide complementary metrics. QUAST stands for QUality ASsessment Tool. 
+
 1. From the left menus select Genomics Analysis - Assembly - Quast
 
 2. Set parameters as

@@ -2,7 +2,7 @@
 
 ## Obtaining a reference genome
 
-To align your assembled genome against a reference genome, we first need to import this reference to Galaxy.
+To align your assembled genome against a reference genome, we first need to import this reference to Galaxy. The reference we will use for Escherichia coli is a uropathogenic (i.e UTI causing) strain [O6:K2:H1 CFT073 (UPEC)](https://www.genome.jp/kegg-bin/show_organism?org=ecc). 
 
 1. Select the “NCBI Accession Download” tool under “Get Data” on the left side of the Galaxy page. 
 2. Under “Select source for IDs”, select “Direct Entry”.

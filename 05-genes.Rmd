@@ -39,7 +39,7 @@ In Galaxy
 ### Finding genes in Jbrowse desktop
 
 1. Take a look at the genes (in orange) labeled in the region of the genome you can observe here. You can click on them for detail and scroll for additional regions of the genome.
-2. In the box in the upper center (currently containing a contig and region) delete the existing information and type "rpoA_1" (don't include the quotes)
+2. In the box in the upper center (currently containing a contig and region) delete the existing information and type "rpoS" (don't include the quotes)
 3. Click on the gene to view it
 4. Click on the orange bar below the sequence to view the gene in the right-hand panel.
 5. Click "Show feature sequence" and copy it 
@@ -74,4 +74,23 @@ In Galaxy
 7. Repeat steps 2-6 for sequence 2.
 8. Click “Run tool”
 9. View the alignment and examine for differences between the sequences
+
+## More genes
+
+In E. coli repeat the gene finding process and comparisons for the following genes:
+
+- sdhCDAB 
+- zap
+- ihfB 
+- sucAB 
+- sucCD 
+- dapD 
+- dapE 
+- small RNA GcvB 
+- gdhA
+- pykA 
+- pykF 
+- ghdA 
+- zwf 
+- gnd
 

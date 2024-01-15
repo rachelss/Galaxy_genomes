@@ -27,3 +27,4 @@ target-genes-in-galaxy-skip-this-if-using-jbrowse-on-your-computer
 finding-gene-locations
 observing-genes-in-the-genome
 comparing-genes-between-strains
+more-genes
