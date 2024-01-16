@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2024-01-15" />
+<meta name="date" content="2024-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,7 +90,11 @@
 <li class="chapter" data-level="3.2" data-path="assembly.html"><a href="assembly.html#getting-started-with-galaxy"><i class="fa fa-check"></i><b>3.2</b> Getting started with Galaxy</a></li>
 <li class="chapter" data-level="3.3" data-path="assembly.html"><a href="assembly.html#getting-your-sequencing-data"><i class="fa fa-check"></i><b>3.3</b> Getting your sequencing data</a></li>
 <li class="chapter" data-level="3.4" data-path="assembly.html"><a href="assembly.html#assembling-a-genome"><i class="fa fa-check"></i><b>3.4</b> Assembling a genome</a></li>
-<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#quality-checking-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Quality checking the assembly</a></li>
+<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#quality-checking-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Quality checking the assembly</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="assembly.html"><a href="assembly.html#genome-metrics"><i class="fa fa-check"></i><b>3.5.1</b> Genome metrics</a></li>
+<li class="chapter" data-level="3.5.2" data-path="assembly.html"><a href="assembly.html#assessing-genome-information"><i class="fa fa-check"></i><b>3.5.2</b> Assessing genome information</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="align.html"><a href="align.html"><i class="fa fa-check"></i><b>4</b> Genome Alignment</a>
 <ul>
@@ -118,7 +122,9 @@
 <li class="chapter" data-level="6.2.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>6.2.2</b> Observing genes in the genome</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="gene.html"><a href="gene.html#comparing-genes-between-strains"><i class="fa fa-check"></i><b>6.3</b> Comparing genes between strains</a></li>
-<li class="chapter" data-level="6.4" data-path="gene.html"><a href="gene.html#more-genes"><i class="fa fa-check"></i><b>6.4</b> More genes</a></li>
+<li class="chapter" data-level="6.4" data-path="gene.html"><a href="gene.html#comparing-genes-to-a-database"><i class="fa fa-check"></i><b>6.4</b> Comparing genes to a database</a></li>
+<li class="chapter" data-level="6.5" data-path="gene.html"><a href="gene.html#comparing-across-strains"><i class="fa fa-check"></i><b>6.5</b> Comparing across strains</a></li>
+<li class="chapter" data-level="6.6" data-path="gene.html"><a href="gene.html#more-genes"><i class="fa fa-check"></i><b>6.6</b> More genes</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -172,7 +178,7 @@ All of the following analysis will be performed under this history. If you run a
 <h2><span class="header-section-number">3.3</span> Getting your sequencing data<a href="assembly.html#getting-your-sequencing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Click on the ‘Upload Data’ button on the left side of the screen.
-Ask the instructor about uploading the data from your sample onto Galaxy.</p></li>
+Select your data from the Google Drive that your instructor shared with you.</p></li>
 <li><p>When the job turns green, click on the “eye” symbol next to one of your fastq files under your history on the right side of the page. The page may take a few seconds to load, and Galaxy will show you the first megabyte of your read file.</p></li>
 </ol>
 </div>
@@ -192,6 +198,8 @@ Click on Flye, which will take you to its homepage.</li>
 <div id="quality-checking-the-assembly" class="section level2 hasAnchor" number="3.5">
 <h2><span class="header-section-number">3.5</span> Quality checking the assembly<a href="assembly.html#quality-checking-the-assembly" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that Flye has completed, we will analyze the results.</p>
+<div id="genome-metrics" class="section level3 hasAnchor" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Genome metrics<a href="assembly.html#genome-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies, and can also be used to compare multiple assemblies. The tool can also take an optional reference file as input, and will provide complementary metrics. QUAST stands for QUality ASsessment Tool.</p>
 <ol style="list-style-type: decimal">
 <li><p>From the left menus select Genomics Analysis - Assembly - Quast</p></li>
@@ -211,8 +219,18 @@ Click on Flye, which will take you to its homepage.</li>
 <li>What is the total read length? Is this what you expect from your sample? (Check out the <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000007445.1/">reference E. coli</a> or the <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_031191205.1/">reference H. parainfluenzae</a>)</li>
 <li>What is the <a href="https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics">N50</a> value?</li>
 </ul>
+</div>
+<div id="assessing-genome-information" class="section level3 hasAnchor" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Assessing genome information<a href="assembly.html#assessing-genome-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Busco is a tool used to determine whether your genome has the expected genes for a bacterial genome.</p>
+<ol style="list-style-type: decimal">
+<li><p>From the left menus select Annotation - Busco</p></li>
+<li><p>Run tool</p></li>
+<li><p>Even if it fails click on the “eye” to view the summary analysis. You should see some information about your assembly, particularly how many of the expected genes were not found. If only a few are missing then you have a good assembly.</p></li>
+</ol>
 <p>Congratulations! You have assemble a bacterial genome that no one else has ever seen before!</p>
 
+</div>
 </div>
 </div>
             </section>

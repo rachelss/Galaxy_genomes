@@ -30,7 +30,7 @@ All of the following analysis will be performed under this history. If you run a
 ## Getting your sequencing data
 
 1. Click on the 'Upload Data' button on the left side of the screen.
-Ask the instructor about uploading the data from your sample onto Galaxy.
+Select your data from the Google Drive that your instructor shared with you.
 
 2. When the job turns green, click on the “eye” symbol next to one of your fastq files under your history on the right side of the page. The page may take a few seconds to load, and Galaxy will show you the first megabyte of your read file.
 
@@ -53,6 +53,8 @@ The assembly will show up as green in your history when it has completed. This s
 
 Now that Flye has completed, we will analyze the results. 
 
+### Genome metrics
+
 Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies, and can also be used to compare multiple assemblies. The tool can also take an optional reference file as input, and will provide complementary metrics. QUAST stands for QUality ASsessment Tool. 
 
 1. From the left menus select Genomics Analysis - Assembly - Quast
@@ -68,5 +70,15 @@ Quast (Gurevich et al. 2013) is a tool providing quality metrics for assemblies,
   - How many contigs (i.e. genome fragments) did your assembly produce? 
   - What is the total read length? Is this what you expect from your sample? (Check out the [reference E. coli](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000007445.1/) or the [reference H. parainfluenzae](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_031191205.1/))
   - What is the [N50](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics) value?
+  
+### Assessing genome information
+
+Busco is a tool used to determine whether your genome has the expected genes for a bacterial genome. 
+
+1. From the left menus select Annotation - Busco
+
+2. Run tool 
+
+3. Even if it fails click on the "eye" to view the summary analysis. You should see some information about your assembly, particularly how many of the expected genes were not found. If only a few are missing then you have a good assembly.
   
 Congratulations! You have assemble a bacterial genome that no one else has ever seen before!

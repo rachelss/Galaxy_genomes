@@ -10,6 +10,8 @@ getting-started-with-galaxy
 getting-your-sequencing-data
 assembling-a-genome
 quality-checking-the-assembly
+genome-metrics
+assessing-genome-information
 align
 obtaining-a-reference-genome
 aligning-two-samples
@@ -27,4 +29,6 @@ target-genes-in-galaxy-skip-this-if-using-jbrowse-on-your-computer
 finding-gene-locations
 observing-genes-in-the-genome
 comparing-genes-between-strains
+comparing-genes-to-a-database
+comparing-across-strains
 more-genes

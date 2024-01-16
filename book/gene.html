@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2024-01-15" />
+<meta name="date" content="2024-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,7 +90,11 @@
 <li class="chapter" data-level="3.2" data-path="assembly.html"><a href="assembly.html#getting-started-with-galaxy"><i class="fa fa-check"></i><b>3.2</b> Getting started with Galaxy</a></li>
 <li class="chapter" data-level="3.3" data-path="assembly.html"><a href="assembly.html#getting-your-sequencing-data"><i class="fa fa-check"></i><b>3.3</b> Getting your sequencing data</a></li>
 <li class="chapter" data-level="3.4" data-path="assembly.html"><a href="assembly.html#assembling-a-genome"><i class="fa fa-check"></i><b>3.4</b> Assembling a genome</a></li>
-<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#quality-checking-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Quality checking the assembly</a></li>
+<li class="chapter" data-level="3.5" data-path="assembly.html"><a href="assembly.html#quality-checking-the-assembly"><i class="fa fa-check"></i><b>3.5</b> Quality checking the assembly</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="assembly.html"><a href="assembly.html#genome-metrics"><i class="fa fa-check"></i><b>3.5.1</b> Genome metrics</a></li>
+<li class="chapter" data-level="3.5.2" data-path="assembly.html"><a href="assembly.html#assessing-genome-information"><i class="fa fa-check"></i><b>3.5.2</b> Assessing genome information</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="align.html"><a href="align.html"><i class="fa fa-check"></i><b>4</b> Genome Alignment</a>
 <ul>
@@ -118,7 +122,9 @@
 <li class="chapter" data-level="6.2.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>6.2.2</b> Observing genes in the genome</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="gene.html"><a href="gene.html#comparing-genes-between-strains"><i class="fa fa-check"></i><b>6.3</b> Comparing genes between strains</a></li>
-<li class="chapter" data-level="6.4" data-path="gene.html"><a href="gene.html#more-genes"><i class="fa fa-check"></i><b>6.4</b> More genes</a></li>
+<li class="chapter" data-level="6.4" data-path="gene.html"><a href="gene.html#comparing-genes-to-a-database"><i class="fa fa-check"></i><b>6.4</b> Comparing genes to a database</a></li>
+<li class="chapter" data-level="6.5" data-path="gene.html"><a href="gene.html#comparing-across-strains"><i class="fa fa-check"></i><b>6.5</b> Comparing across strains</a></li>
+<li class="chapter" data-level="6.6" data-path="gene.html"><a href="gene.html#more-genes"><i class="fa fa-check"></i><b>6.6</b> More genes</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -232,12 +238,31 @@
 <li>View the alignment and examine for differences between the sequences</li>
 </ol>
 </div>
-<div id="more-genes" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> More genes<a href="gene.html#more-genes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="comparing-genes-to-a-database" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Comparing genes to a database<a href="gene.html#comparing-genes-to-a-database" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" class="uri">https://blast.ncbi.nlm.nih.gov/Blast.cgi</a></li>
+<li>Select Nucleotide Blast</li>
+<li>Paste your sequence of interest in the box</li>
+<li>Scroll down and click BLAST</li>
+<li>Examine the difference between your sample and the first alignment</li>
+</ol>
+</div>
+<div id="comparing-across-strains" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Comparing across strains<a href="gene.html#comparing-across-strains" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Paste your sequence in the shared Google doc and make sure it’s labeled with identifying information</li>
+<li>Go to <a href="http://translatorx.co.uk/" class="uri">http://translatorx.co.uk/</a></li>
+<li>Paste all of the sequences from the Google doc into the box</li>
+<li>Click submit</li>
+</ol>
+</div>
+<div id="more-genes" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> More genes<a href="gene.html#more-genes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In E. coli repeat the gene finding process and comparisons for the following genes:</p>
 <ul>
 <li>sdhCDAB</li>
-<li>zap</li>
+<li>zap - note that zapE might be easier to start with</li>
 <li>ihfB</li>
 <li>sucAB</li>
 <li>sucCD</li>

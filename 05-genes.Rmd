@@ -75,12 +75,27 @@ In Galaxy
 8. Click “Run tool”
 9. View the alignment and examine for differences between the sequences
 
+## Comparing genes to a database
+
+1. Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi
+2. Select Nucleotide Blast
+3. Paste your sequence of interest in the box
+4. Scroll down and click BLAST
+5. Examine the difference between your sample and the first alignment
+
+## Comparing across strains
+
+1. Paste your sequence in the shared Google doc and make sure it's labeled with identifying information
+2. Go to http://translatorx.co.uk/
+3. Paste all of the sequences from the Google doc into the box
+4. Click submit
+
 ## More genes
 
 In E. coli repeat the gene finding process and comparisons for the following genes:
 
 - sdhCDAB 
-- zap
+- zap - note that zapE might be easier to start with
 - ihfB 
 - sucAB 
 - sucCD 
