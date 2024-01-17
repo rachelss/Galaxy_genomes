@@ -86,7 +86,7 @@ In Galaxy
 ## Comparing across strains
 
 1. Paste your sequence in the shared Google doc and make sure it's labeled with identifying information using the [proper fasta format](https://www.bioinformatics.nl/tools/crab_fasta.html)
-2. Go to http://translatorx.co.uk/
+2. Go to http://translatorx.co.uk/ OR https://www.ebi.ac.uk/Tools/msa/muscle/
 3. Paste all of the sequences from the Google doc into the box
 4. Click submit
 
@@ -97,11 +97,11 @@ In E. coli repeat the gene finding process and comparisons for the following gen
 - sdhCDAB 
 - zapE
 - ihfB 
-- sucAB 
+- sucA
+- sucB 
 - sucCD 
 - dapD 
 - dapE 
-- small RNA GcvB 
 - gdhA
 - pykA 
 - pykF 

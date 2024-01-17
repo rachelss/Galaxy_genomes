@@ -21,7 +21,7 @@ service Galaxy, an open source project that allows us to run often testy bioinfo
 Please follow these step-by-step instructions to register on Galaxy:
 
 1. Create an account on Galaxy at https://usegalaxy.org/login. 
-Your “public name” can be whatever you like, but you should fill out all fields. After creating an account, log in to Galaxy.
+Your “public name” can be whatever you like, but you should fill out all fields. After creating an account, log in to Galaxy.  **Note that if at some point you have difficulties with this server, try https://usegalaxy.org.au/**
 
 2. Click on the plus '+' on the top right of the page and create a new "history" (i.e., project that will contain data and the results of software runs) with a name that is relevant to the data you are analyzing.
 Some of you are analyzing *E. coli* and others *H. para* so please name accordingly in case you want to try another analysis later.
