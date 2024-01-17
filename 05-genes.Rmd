@@ -95,7 +95,7 @@ In Galaxy
 In E. coli repeat the gene finding process and comparisons for the following genes:
 
 - sdhCDAB 
-- zap - note that zapE might be easier to start with
+- zapE
 - ihfB 
 - sucAB 
 - sucCD 

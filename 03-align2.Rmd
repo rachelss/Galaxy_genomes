@@ -5,7 +5,7 @@
 In cases where we have limited data we may not be able to assemble a genome. However, using a reference genome, we can compare the data to the reference and identify differences even with limited data.
 
 1. Select (from the left menus) Genomics Analysis - Mapping - Minimap2
-2. Select all your datasets
+2. Click the '...' and select all your datasets
 3. Assuming you sequenced E. coli, use CFT076 as your reference
 
 It may take some time for all of the alignments to complete.
