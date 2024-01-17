@@ -1,0 +1,38 @@
+# Align data to reference {#align2}
+
+## Align
+
+In cases where we have limited data we may not be able to assemble a genome. However, using a reference genome, we can compare the data to the reference and identify differences even with limited data.
+
+1. Select (from the left menus) Genomics Analysis - Mapping - Minimap2
+2. Select all your datasets
+3. Assuming you sequenced E. coli, use CFT076 as your reference
+
+It may take some time for all of the alignments to complete.
+
+## Merge
+
+It's useful to merge the multiple output (bam) files into one for convenience.
+
+1. Select (from the left menus) Genomics Toolkits - Picard - MergeSamFiles
+2. Select all of the Map with minimap outputs
+3. Click Run
+
+## View
+
+To view the data as it aligns to the reference do the following.
+
+1. Click (on the left side of screen) "Statistics and Visualization" > "Graph/Display data" > "Jbrowse"
+2. Under “Reference genome to display” select E. coli CFT076
+3. Add track group
+4. Select track type: BAM pileups
+5. Select your merged bam file
+6. When the run turns green, click the "eye" in Jbrowse
+7. Zoom in to reads to look for variants
+
+## Variant calling
+
+The computer can identify locations in the genome with certain differences between your sample and the reference, given the amount of information available.
+
+1. Select Genomic File Manipulation - Nanopore - medaka variant pipeline
+2. Specify the model as r104 hac

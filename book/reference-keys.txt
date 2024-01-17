@@ -15,6 +15,11 @@ assessing-genome-information
 align
 obtaining-a-reference-genome
 aligning-two-samples
+align2
+align-1
+merge
+view
+variant-calling
 annot
 annotation
 viewing-the-annotation

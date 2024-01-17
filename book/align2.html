@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Genome Alignment | Galaxy Bacterial Genomics Workshop</title>
+  <title>Chapter 5 Align data to reference | Galaxy Bacterial Genomics Workshop</title>
   <meta name="description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Genome Alignment | Galaxy Bacterial Genomics Workshop" />
+  <meta property="og:title" content="Chapter 5 Align data to reference | Galaxy Bacterial Genomics Workshop" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
   <meta name="github-repo" content="rachelss/Galaxy_genomes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Genome Alignment | Galaxy Bacterial Genomics Workshop" />
+  <meta name="twitter:title" content="Chapter 5 Align data to reference | Galaxy Bacterial Genomics Workshop" />
   
   <meta name="twitter:description" content="Step-by-step guide to a bacterial genomics project in Galaxy." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="assembly.html"/>
-<link rel="next" href="align2.html"/>
+<link rel="prev" href="align.html"/>
+<link rel="next" href="annot.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -153,34 +153,47 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="align" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Genome Alignment<a href="align.html#align" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="obtaining-a-reference-genome" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Obtaining a reference genome<a href="align.html#obtaining-a-reference-genome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To align your assembled genome against a reference genome, we first need to import this reference to Galaxy. The reference we will use for Escherichia coli is a uropathogenic (i.e UTI causing) strain <a href="https://www.genome.jp/kegg-bin/show_organism?org=ecc">O6:K2:H1 CFT073 (UPEC)</a>.</p>
+<div id="align2" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Align data to reference<a href="align2.html#align2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="align-1" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Align<a href="align2.html#align-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In cases where we have limited data we may not be able to assemble a genome. However, using a reference genome, we can compare the data to the reference and identify differences even with limited data.</p>
 <ol style="list-style-type: decimal">
-<li>Select the “NCBI Accession Download” tool under “Get Data” on the left side of the Galaxy page.</li>
-<li>Under “Select source for IDs”, select “Direct Entry”.</li>
-<li>Under ID List, type NC_004431 (for E. coli) or NZ_CP133470.1 (for H. para).</li>
-<li>Click “Run Tool”</li>
+<li>Select (from the left menus) Genomics Analysis - Mapping - Minimap2</li>
+<li>Select all your datasets</li>
+<li>Assuming you sequenced E. coli, use CFT076 as your reference</li>
+</ol>
+<p>It may take some time for all of the alignments to complete.</p>
+</div>
+<div id="merge" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Merge<a href="align2.html#merge" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It’s useful to merge the multiple output (bam) files into one for convenience.</p>
+<ol style="list-style-type: decimal">
+<li>Select (from the left menus) Genomics Toolkits - Picard - MergeSamFiles</li>
+<li>Select all of the Map with minimap outputs</li>
+<li>Click Run</li>
 </ol>
 </div>
-<div id="aligning-two-samples" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Aligning two samples<a href="align.html#aligning-two-samples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Now we are ready to align the two genomes.</p>
+<div id="view" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> View<a href="align2.html#view" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To view the data as it aligns to the reference do the following.</p>
 <ol style="list-style-type: decimal">
-<li>Under “Multiple Alignments” select “Mummer”</li>
-<li>For sequence 1, select the reference by clicking the “…” and selecting NC_004431.</li>
-<li>For sequence 2, select the contigs that you produced with Flye.</li>
-<li>Keep the other parameters default.</li>
-<li>Click “Run Tool”</li>
+<li>Click (on the left side of screen) “Statistics and Visualization” &gt; “Graph/Display data” &gt; “Jbrowse”</li>
+<li>Under “Reference genome to display” select E. coli CFT076</li>
+<li>Add track group</li>
+<li>Select track type: BAM pileups</li>
+<li>Select your merged bam file</li>
+<li>When the run turns green, click the “eye” in Jbrowse</li>
+<li>Zoom in to reads to look for variants</li>
 </ol>
-<p>This should take a couple of minutes.</p>
-<ol start="6" style="list-style-type: decimal">
-<li>In the righthand box labeled “Mummer”…“plot” click the “eye” to view the alignment.</li>
+</div>
+<div id="variant-calling" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Variant calling<a href="align2.html#variant-calling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The computer can identify locations in the genome with certain differences between your sample and the reference, given the amount of information available.</p>
+<ol style="list-style-type: decimal">
+<li>Select Genomic File Manipulation - Nanopore - medaka variant pipeline</li>
+<li>Specify the model as r104 hac</li>
 </ol>
-<p>Diagonal lines indicate sections of the sample genome that align with the reference as in the following example:</p>
-<p><img src="https://mummer4.github.io/tutorial/img/dotplot.gif" /></p>
 
 </div>
 </div>
@@ -189,8 +202,8 @@
           </div>
         </div>
       </div>
-<a href="assembly.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="align2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="align.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="annot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -221,7 +234,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-align.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-align2.Rmd",
 "text": "Edit"
 },
 "history": {
