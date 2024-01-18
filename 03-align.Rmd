@@ -26,3 +26,5 @@ This should take a couple of minutes.
 Diagonal lines indicate sections of the sample genome that align with the reference as in the following example:
 
 ![](https://mummer4.github.io/tutorial/img/dotplot.gif)
+
+Our E. coli genes often turn out a lot messier than this example.

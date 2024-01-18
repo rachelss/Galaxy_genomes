@@ -63,7 +63,7 @@ In Galaxy
 4. Use the plus and minus buttons to zoom in and out, and the arrows to move left or right (or click and drag within the window to move left or right).
 5. Zoom in to see the reference sequence at the top. JBrowse displays the sequence and a 6-frame amino acid translation.
 
-## Comparing genes between strains
+## Comparing genes between strains (optional)
 
 1. Repeat all of the above steps (either 6.1 or 6.2) for the true reference genome to which you want to compare your sample and paste this sequence in a new plain text document. Make sure that the names of the sequences are useful and different!
 2. Open needle (left side of screen: Genomic Toolkits > EMBOSS > needle)
@@ -85,10 +85,14 @@ In Galaxy
 
 ## Comparing across strains
 
-1. Paste your sequence in the shared Google doc and make sure it's labeled with identifying information using the [proper fasta format](https://www.bioinformatics.nl/tools/crab_fasta.html)
+1. Paste your sequence in the shared Google doc for this gene and make sure it's labeled with identifying information using the [proper fasta format](https://www.bioinformatics.nl/tools/crab_fasta.html)
 2. Go to http://translatorx.co.uk/ OR https://www.ebi.ac.uk/Tools/msa/muscle/
 3. Paste all of the sequences from the Google doc into the box
 4. Click submit
+
+Note - sometimes there are errors in copying data. A single gene for multiple strains of E coli should be nearly identical except for a few variants. If you get an error using translatorx, or you you see a lot of variation when using muscle, delete the sequence that differs significantly and/or attempt to find the correct version of the gene for that strain.
+
+How many variants do you see across strains for this particular gene? How many of them are functional? The translatorx alignment will help you see the amino acid sequences while the muscle alignment will help you see all variants.
 
 ## More genes
 

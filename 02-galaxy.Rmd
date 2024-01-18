@@ -17,22 +17,31 @@ This file is in FASTQ format, in which each read is represented over four lines 
 ## Getting started with Galaxy
 
 To to all of our work, including genome assembly and annotation, we will use the 
-service Galaxy, an open source project that allows us to run often testy bioinformatics software in the cloud without the hassle of dealing with local installations. 
+service Galaxy, an open source project that allows us to run bioinformatics software in the cloud without the hassle of dealing with local installations. You should [read more about the Galaxy](https://galaxyproject.org/galaxy-project/) service, which is funded by the National Institute of Health and the National Science Foundation.
 Please follow these step-by-step instructions to register on Galaxy:
 
 1. Create an account on Galaxy at https://usegalaxy.org/login. 
 Your “public name” can be whatever you like, but you should fill out all fields. After creating an account, log in to Galaxy.  **Note that if at some point you have difficulties with this server, try https://usegalaxy.org.au/**
 
-2. Click on the plus '+' on the top right of the page and create a new "history" (i.e., project that will contain data and the results of software runs) with a name that is relevant to the data you are analyzing.
+2. Check your email and click the Galaxy link.
+
+3. Click on the plus '+' on the top right of the page and create a new "history" (i.e., project that will contain data and the results of software runs) with a name that is relevant to the data you are analyzing.
 Some of you are analyzing *E. coli* and others *H. para* so please name accordingly in case you want to try another analysis later.
 All of the following analysis will be performed under this history. If you run a second analysis make sure to make a new history!
 
 ## Getting your sequencing data
 
-1. Click on the 'Upload Data' button on the left side of the screen.
-Select your data from the Google Drive that your instructor shared with you.
+1. Download your data from the Google Drive that your instructor shared with you. You should see files ending in .fastq.gz . If you have a zipped folder of files make sure to unzip it. Do not unzip the fastq files.
 
-2. When the job turns green, click on the “eye” symbol next to one of your fastq files under your history on the right side of the page. The page may take a few seconds to load, and Galaxy will show you the first megabyte of your read file.
+2. In Galaxy, click on the 'Upload Data' button on the left side of the screen.
+
+3. Click 'Choose Local File'
+
+4. Select all your .fastq.gz files and click Open
+
+5. Click Start
+
+6. When the jobs have completed and are all green on the right side of your main Galaxy page, click on the “eye” symbol next to one of your fastq files under your history on the right side of the page. The page may take a few seconds to load, and Galaxy will show you the first megabyte of your read file.
 
 ## Assembling a genome
 
@@ -79,6 +88,7 @@ Busco is a tool used to determine whether your genome has the expected genes for
 
 2. Run tool 
 
-3. Even if it fails click on the "eye" to view the summary analysis. You should see some information about your assembly, particularly how many of the expected genes were not found. If only a few are missing then you have a good assembly.
+3. Even if it fails click on the "eye" to view the summary analysis. You should see some information about your assembly, particularly how many of the expected genes were not found. 
+  - How many genes were missing?
   
 Congratulations! You have assemble a bacterial genome that no one else has ever seen before!

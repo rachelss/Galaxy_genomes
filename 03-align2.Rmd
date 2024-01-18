@@ -30,9 +30,14 @@ To view the data as it aligns to the reference do the following.
 6. When the run turns green, click the "eye" in Jbrowse
 7. Zoom in to reads to look for variants
 
+Find multiple places in the genome where the reads from your sample consistently differ from the reference genome.
+
 ## Variant calling
 
 The computer can identify locations in the genome with certain differences between your sample and the reference, given the amount of information available.
 
 1. Select Genomic File Manipulation - Nanopore - medaka variant pipeline
 2. Specify the model as r104 hac
+3. Click Run
+
+How many variants were found?

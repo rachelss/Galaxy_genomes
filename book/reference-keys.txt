@@ -33,7 +33,7 @@ finding-genes-in-jbrowse-desktop
 target-genes-in-galaxy-skip-this-if-using-jbrowse-on-your-computer
 finding-gene-locations
 observing-genes-in-the-genome
-comparing-genes-between-strains
+comparing-genes-between-strains-optional
 comparing-genes-to-a-database
 comparing-across-strains
 more-genes

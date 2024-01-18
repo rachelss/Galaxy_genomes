@@ -128,7 +128,7 @@
 <li class="chapter" data-level="7.2.1" data-path="gene.html"><a href="gene.html#finding-gene-locations"><i class="fa fa-check"></i><b>7.2.1</b> Finding gene locations</a></li>
 <li class="chapter" data-level="7.2.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>7.2.2</b> Observing genes in the genome</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="gene.html"><a href="gene.html#comparing-genes-between-strains"><i class="fa fa-check"></i><b>7.3</b> Comparing genes between strains</a></li>
+<li class="chapter" data-level="7.3" data-path="gene.html"><a href="gene.html#comparing-genes-between-strains-optional"><i class="fa fa-check"></i><b>7.3</b> Comparing genes between strains (optional)</a></li>
 <li class="chapter" data-level="7.4" data-path="gene.html"><a href="gene.html#comparing-genes-to-a-database"><i class="fa fa-check"></i><b>7.4</b> Comparing genes to a database</a></li>
 <li class="chapter" data-level="7.5" data-path="gene.html"><a href="gene.html#comparing-across-strains"><i class="fa fa-check"></i><b>7.5</b> Comparing across strains</a></li>
 <li class="chapter" data-level="7.6" data-path="gene.html"><a href="gene.html#more-genes"><i class="fa fa-check"></i><b>7.6</b> More genes</a></li>
@@ -171,11 +171,12 @@ This file is in FASTQ format, in which each read is represented over four lines 
 <div id="getting-started-with-galaxy" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Getting started with Galaxy<a href="assembly.html#getting-started-with-galaxy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To to all of our work, including genome assembly and annotation, we will use the
-service Galaxy, an open source project that allows us to run often testy bioinformatics software in the cloud without the hassle of dealing with local installations.
+service Galaxy, an open source project that allows us to run bioinformatics software in the cloud without the hassle of dealing with local installations. You should <a href="https://galaxyproject.org/galaxy-project/">read more about the Galaxy</a> service, which is funded by the National Institute of Health and the National Science Foundation.
 Please follow these step-by-step instructions to register on Galaxy:</p>
 <ol style="list-style-type: decimal">
 <li><p>Create an account on Galaxy at <a href="https://usegalaxy.org/login" class="uri">https://usegalaxy.org/login</a>.
 Your “public name” can be whatever you like, but you should fill out all fields. After creating an account, log in to Galaxy. <strong>Note that if at some point you have difficulties with this server, try <a href="https://usegalaxy.org.au/" class="uri">https://usegalaxy.org.au/</a></strong></p></li>
+<li><p>Check your email and click the Galaxy link.</p></li>
 <li><p>Click on the plus ‘+’ on the top right of the page and create a new “history” (i.e., project that will contain data and the results of software runs) with a name that is relevant to the data you are analyzing.
 Some of you are analyzing <em>E. coli</em> and others <em>H. para</em> so please name accordingly in case you want to try another analysis later.
 All of the following analysis will be performed under this history. If you run a second analysis make sure to make a new history!</p></li>
@@ -184,9 +185,12 @@ All of the following analysis will be performed under this history. If you run a
 <div id="getting-your-sequencing-data" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Getting your sequencing data<a href="assembly.html#getting-your-sequencing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li><p>Click on the ‘Upload Data’ button on the left side of the screen.
-Select your data from the Google Drive that your instructor shared with you.</p></li>
-<li><p>When the job turns green, click on the “eye” symbol next to one of your fastq files under your history on the right side of the page. The page may take a few seconds to load, and Galaxy will show you the first megabyte of your read file.</p></li>
+<li><p>Download your data from the Google Drive that your instructor shared with you. You should see files ending in .fastq.gz . If you have a zipped folder of files make sure to unzip it. Do not unzip the fastq files.</p></li>
+<li><p>In Galaxy, click on the ‘Upload Data’ button on the left side of the screen.</p></li>
+<li><p>Click ‘Choose Local File’</p></li>
+<li><p>Select all your .fastq.gz files and click Open</p></li>
+<li><p>Click Start</p></li>
+<li><p>When the jobs have completed and are all green on the right side of your main Galaxy page, click on the “eye” symbol next to one of your fastq files under your history on the right side of the page. The page may take a few seconds to load, and Galaxy will show you the first megabyte of your read file.</p></li>
 </ol>
 </div>
 <div id="assembling-a-genome" class="section level2 hasAnchor" number="3.4">
@@ -233,8 +237,11 @@ Click on Flye, which will take you to its homepage.</li>
 <ol style="list-style-type: decimal">
 <li><p>From the left menus select Annotation - Busco</p></li>
 <li><p>Run tool</p></li>
-<li><p>Even if it fails click on the “eye” to view the summary analysis. You should see some information about your assembly, particularly how many of the expected genes were not found. If only a few are missing then you have a good assembly.</p></li>
+<li><p>Even if it fails click on the “eye” to view the summary analysis. You should see some information about your assembly, particularly how many of the expected genes were not found.</p></li>
 </ol>
+<ul>
+<li>How many genes were missing?</li>
+</ul>
 <p>Congratulations! You have assemble a bacterial genome that no one else has ever seen before!</p>
 
 </div>

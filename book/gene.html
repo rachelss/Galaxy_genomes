@@ -128,7 +128,7 @@
 <li class="chapter" data-level="7.2.1" data-path="gene.html"><a href="gene.html#finding-gene-locations"><i class="fa fa-check"></i><b>7.2.1</b> Finding gene locations</a></li>
 <li class="chapter" data-level="7.2.2" data-path="gene.html"><a href="gene.html#observing-genes-in-the-genome"><i class="fa fa-check"></i><b>7.2.2</b> Observing genes in the genome</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="gene.html"><a href="gene.html#comparing-genes-between-strains"><i class="fa fa-check"></i><b>7.3</b> Comparing genes between strains</a></li>
+<li class="chapter" data-level="7.3" data-path="gene.html"><a href="gene.html#comparing-genes-between-strains-optional"><i class="fa fa-check"></i><b>7.3</b> Comparing genes between strains (optional)</a></li>
 <li class="chapter" data-level="7.4" data-path="gene.html"><a href="gene.html#comparing-genes-to-a-database"><i class="fa fa-check"></i><b>7.4</b> Comparing genes to a database</a></li>
 <li class="chapter" data-level="7.5" data-path="gene.html"><a href="gene.html#comparing-across-strains"><i class="fa fa-check"></i><b>7.5</b> Comparing across strains</a></li>
 <li class="chapter" data-level="7.6" data-path="gene.html"><a href="gene.html#more-genes"><i class="fa fa-check"></i><b>7.6</b> More genes</a></li>
@@ -231,8 +231,8 @@
 </ol>
 </div>
 </div>
-<div id="comparing-genes-between-strains" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Comparing genes between strains<a href="gene.html#comparing-genes-between-strains" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="comparing-genes-between-strains-optional" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Comparing genes between strains (optional)<a href="gene.html#comparing-genes-between-strains-optional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>Repeat all of the above steps (either 6.1 or 6.2) for the true reference genome to which you want to compare your sample and paste this sequence in a new plain text document. Make sure that the names of the sequences are useful and different!</li>
 <li>Open needle (left side of screen: Genomic Toolkits &gt; EMBOSS &gt; needle)</li>
@@ -258,11 +258,13 @@
 <div id="comparing-across-strains" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> Comparing across strains<a href="gene.html#comparing-across-strains" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Paste your sequence in the shared Google doc and make sure it’s labeled with identifying information using the <a href="https://www.bioinformatics.nl/tools/crab_fasta.html">proper fasta format</a></li>
+<li>Paste your sequence in the shared Google doc for this gene and make sure it’s labeled with identifying information using the <a href="https://www.bioinformatics.nl/tools/crab_fasta.html">proper fasta format</a></li>
 <li>Go to <a href="http://translatorx.co.uk/" class="uri">http://translatorx.co.uk/</a> OR <a href="https://www.ebi.ac.uk/Tools/msa/muscle/" class="uri">https://www.ebi.ac.uk/Tools/msa/muscle/</a></li>
 <li>Paste all of the sequences from the Google doc into the box</li>
 <li>Click submit</li>
 </ol>
+<p>Note - sometimes there are errors in copying data. A single gene for multiple strains of E coli should be nearly identical except for a few variants. If you get an error using translatorx, or you you see a lot of variation when using muscle, delete the sequence that differs significantly and/or attempt to find the correct version of the gene for that strain.</p>
+<p>How many variants do you see across strains for this particular gene? How many of them are functional? The translatorx alignment will help you see the amino acid sequences while the muscle alignment will help you see all variants.</p>
 </div>
 <div id="more-genes" class="section level2 hasAnchor" number="7.6">
 <h2><span class="header-section-number">7.6</span> More genes<a href="gene.html#more-genes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
