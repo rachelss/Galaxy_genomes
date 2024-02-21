@@ -101,8 +101,7 @@ In E. coli repeat the gene finding process and comparisons for the following gen
 - sdhCDAB 
 - zapE
 - ihfB 
-- sucA
-- sucB 
+- sucAB 
 - sucCD 
 - dapD 
 - dapE 

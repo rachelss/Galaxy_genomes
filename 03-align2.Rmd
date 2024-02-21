@@ -6,7 +6,7 @@ In cases where we have limited data we may not be able to assemble a genome. How
 
 1. Select (from the left menus) Genomics Analysis - Mapping - Minimap2
 2. Click the '...' and select all your datasets
-3. Assuming you sequenced E. coli, use CFT076 as your reference
+3. Assuming you sequenced E. coli, use CFT076 as your reference (or the reference specified by your instructor)
 
 It may take some time for all of the alignments to complete.
 
@@ -23,7 +23,7 @@ It's useful to merge the multiple output (bam) files into one for convenience.
 To view the data as it aligns to the reference do the following.
 
 1. Click (on the left side of screen) "Statistics and Visualization" > "Graph/Display data" > "Jbrowse"
-2. Under “Reference genome to display” select E. coli CFT076
+2. Under “Reference genome to display” select E. coli CFT076 (or the reference specified by your instructor)
 3. Add track group
 4. Select track type: BAM pileups
 5. Select your merged bam file
@@ -36,8 +36,19 @@ Find multiple places in the genome where the reads from your sample consistently
 
 The computer can identify locations in the genome with certain differences between your sample and the reference, given the amount of information available.
 
-1. Select Genomic File Manipulation - Nanopore - medaka variant pipeline
-2. Specify the model as r104 hac
-3. Click Run
+1. Select Variant Calling - FreeBayes
+2. Select E. coli CFT076 as the reference genome (or the reference specified by your instructor)
+3. Select read coverage - Specify Coverage - use 6
+4. Choose parameter selection - 5. Full list
+5. Population model options - select Set population model options
+6. Set ploidy to 1
+7. Click Run
+
+How many variants were found?
+
+## Structural variants
+
+1. Run Calmd on your sam/bam file
+2. Run Sniffles on your calmd output
 
 How many variants were found?
